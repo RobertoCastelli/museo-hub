@@ -5,22 +5,12 @@ _Contiene la traccia scelta, il contesto simulato, l’obiettivo generale, le fu
 
 ---
 
-## Nome del progetto
+## Inquadramento del progetto
 
-**MuseoHub**
-
-## Corso di studio
-
-L-31 Informatica per le Aziende Digitali  
-Università Telematica Pegaso
-
-## Traccia scelta
-
-PW 22 — Digitalizzazione dei processi aziendali in un’impresa culturale: progettazione di una piattaforma informatica per la gestione di servizi, dati e utenti.
-
-## Tema
-
-Tema n. 1 — La digitalizzazione dell’impresa
+- **Nome progetto:** MuseoHub
+- **Corso di studio:** L-31 Informatica per le Aziende Digitali, Università Telematica Pegaso
+- **Tema:** Tema n. 1 — La digitalizzazione dell’impresa
+- **Traccia scelta:** PW 22 — Digitalizzazione dei processi aziendali in un’impresa culturale: progettazione di una piattaforma informatica per la gestione di servizi, dati e utenti
 
 ## Contesto simulato
 
@@ -75,7 +65,7 @@ Il flusso previsto è il seguente:
 - verifica email;
 - invio email reale;
 - pagamento online, poiché il prototipo considera eventi e visite gratuite;
-- QR code biglietto;
+- QR code biglietto, escluso dal perimetro minimo, ma valutabile come estensione del prototipo;
 - reset password;
 - ruoli amministrativi complessi;
 - notifiche push;
@@ -97,7 +87,7 @@ Il flusso previsto è il seguente:
 
 - **Visual Studio Code:** ambiente di sviluppo principale;
 - **Vim:** editor testuale di supporto per modifiche rapide;
-- **ChatGPT:** strumento di supporto per la revisione dei testi, l’uniformità terminologica e il controllo della coerenza documentale.
+- **ChatGPT:** strumento di supporto per la revisione dei testi, l’uniformità terminologica e il controllo della coerenza documentale;
 - **Mermaid:** realizzazione di diagrammi testuali versionabili;
 - **Markdown:** redazione della documentazione progettuale.
 
