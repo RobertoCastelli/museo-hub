@@ -1,5 +1,8 @@
 # Limiti e sviluppi futuri
 
-Questo documento raccoglie i limiti consapevoli del prototipo MuseoHub e le possibili evoluzioni future.
+_Questo documento raccoglie i limiti consapevoli del prototipo MuseoHub e le possibili evoluzioni future._
+_Serve a distinguere ciò che è stato implementato nel Project Work da funzionalità più avanzate escluse dal perimetro, come email automatiche, pagamenti online, autenticazione completa, analytics avanzati o hardening cybersecurity._
 
-Serve a distinguere ciò che è stato implementato nel Project Work da funzionalità più avanzate escluse dal perimetro, come email automatiche, pagamenti online, autenticazione completa, analytics avanzati o hardening cybersecurity.
+---
+
+Il sistema non include pagamenti online. La scelta è coerente con il perimetro del prototipo, che considera eventi e visite gratuite. Un’eventuale gestione di biglietteria o pagamento digitale può essere prevista come sviluppo futuro.

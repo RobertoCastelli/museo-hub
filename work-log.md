@@ -1,33 +1,19 @@
 # Work log
 
-Questo documento registra le sessioni di lavoro svolte durante il progetto.
+_Questo documento registra le sessioni di lavoro svolte durante il progetto._
 
 ---
 
-## Sessione 001
+## Registro sintetico
 
-**Data:** 15/05/2026  
-**Durata:** 3h 00m  
-**Obiettivo:** Creazione fascicolo di progetto
+### 001 — 15/06/2026 — 3.5h — Setup progetto
 
-**Attività svolte**
+**Attività:** creazione fascicolo documentale iniziale.  
+**Output:** `README.md`, `work-log.md`, `decision-log.md`, `project-checklist.md`, `docs/`.  
+**Commit:** `docs: Initialize MuseoHub structure`
 
-- Creata struttura iniziale del repository.
-- Creati i primi file documentali.
-- Definito approccio di tracciamento del lavoro.
+### 002 — 15/06/2026 — 4h — Aggiornamento docs
 
-**File / output prodotti**
-
-- `README.md`
-- `work-log.md`
-- `decision-log.md`
-- `project-checklist.md`
-- `docs/`
-
-**Problemi / decisioni**
-
-- Utilizzo di file Markdown per documentare il processo.
-
-**Commit consigliato**
-
-- Initialize museo-hub structure
+**Attività:** aggiornamento scheda progetto e analisi del problema.  
+**Output:** `docs/00-10`.  
+**Commit:** `docs: Update docs/*.md`
