@@ -97,7 +97,7 @@ Il flusso previsto è il seguente:
 
 - **Visual Studio Code:** ambiente di sviluppo principale;
 - **Vim:** editor testuale di supporto per modifiche rapide;
-- **ChatGPT:** strumento di supporto per la revisione formale dei testi, il controllo di coerenza documentale. Le scelte progettuali, l’implementazione e la redazione restano verificate e rielaborate personalmente.
+- **ChatGPT:** strumento di supporto per la revisione dei testi, l’uniformità terminologica e il controllo della coerenza documentale.
 - **Mermaid:** realizzazione di diagrammi testuali versionabili;
 - **Markdown:** redazione della documentazione progettuale.
 
@@ -115,7 +115,6 @@ Il flusso previsto è il seguente:
 
 ## Criterio di successo
 
-Il criterio di successo riguarda la coerenza tra processo digitalizzato, modello dati, API, interfaccia utente e documentazione finale.
 Il progetto si considera riuscito se il prototipo consente di completare il flusso principale:
 
 1. consultazione di un evento;

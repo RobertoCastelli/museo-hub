@@ -43,7 +43,6 @@ Il prototipo non mira a sostituire un gestionale museale completo, ma a dimostra
 
 Il progetto si concentra sulla gestione informativa e organizzativa di eventi, prenotazioni e feedback.
 Non vengono affrontati aspetti più complessi come eventuale pagamento online, invio automatico di email, verifica dell’identità del visitatore, bigliettazione digitale, QR code o integrazione con sistemi esterni.
-Questa scelta consente di mantenere il prototipo coerente con gli obiettivi del Project Work e con il tempo disponibile, concentrando l’attenzione su database, API, interfaccia web e documentazione del processo.
 
 ## Risultato atteso
 

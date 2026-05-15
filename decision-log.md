@@ -5,9 +5,9 @@ _Questo documento registra le principali decisioni progettuali prese durante lo 
 ---
 
 - D001 - **Nome progetto:** MuseoHub
-- D002 - **Contesto:** piccola realtà museale, simulata
+- D002 - **Contesto:** piccola realtà museale simulata
 - D003 - **Stack:** React / Express / SQLite / Render
 - D004 - **Strumenti:** Markdown/Mermaid per la documentazione
-- D005 - **Editor:** Visual Studio Code e VIM
+- D005 - **Editor:** Visual Studio Code e Vim
 - D006 - **Tipo prenotazione:** guest / no registrazione
 - D007 - **Tipo eventi:** gratuiti / no pagamenti

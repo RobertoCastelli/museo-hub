@@ -1,7 +1,7 @@
 # Traccia PW 22
 
-Questo documento riporta la traccia ufficiale del Project Work n. 22 fornita dall’Università Telematica Pegaso.  
-Serve come riferimento interno per mantenere il progetto coerente con i requisiti richiesti dall’università.
+_Questo documento riporta la traccia ufficiale del Project Work n. 22 fornita dall’Università Telematica Pegaso._  
+_Serve come riferimento interno per mantenere il progetto coerente con i requisiti richiesti dall’università._
 
 ---
 
