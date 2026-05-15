@@ -14,6 +14,6 @@ _Questo documento registra le sessioni di lavoro svolte durante il progetto._
 
 ### 002 — 15/06/2026 — 4h — Aggiornamento docs
 
-**Attività:** aggiornamento scheda progetto e analisi del problema.  
-**Output:** `docs/00-10`.  
+**Attività:** aggiornamento docs, revisione e formattazione testi.  
+**Output:** `docs/00-11`.  
 **Commit:** `docs: Update docs/*.md`
