@@ -97,8 +97,7 @@ Il flusso previsto è il seguente:
 
 - **Visual Studio Code:** ambiente di sviluppo principale;
 - **Vim:** editor testuale di supporto per modifiche rapide;
-- **Git e GitHub:** versionamento del codice, gestione del repository e tracciamento dell’evoluzione del progetto;
-- **ChatGPT:** supporto per revisione formale dei testi e controllo di coerenza documentale. Le scelte progettuali, l’implementazione e la redazione restano sviluppate personalmente.
+- **ChatGPT:** strumento di supporto per la revisione formale dei testi, il controllo di coerenza documentale. Le scelte progettuali, l’implementazione e la redazione restano verificate e rielaborate personalmente.
 - **Mermaid:** realizzazione di diagrammi testuali versionabili;
 - **Markdown:** redazione della documentazione progettuale.
 

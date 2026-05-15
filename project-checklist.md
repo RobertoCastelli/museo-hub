@@ -12,14 +12,14 @@ _Serve per controllare l’avanzamento delle attività e garantire che progettaz
 - [x] Inserire la traccia PW 22 tra le fonti interne
 - [x] Inserire testi `docs/*.md`
 
-## Diagrammi
+## Modellazione e diagrammi
 
-- [ ] Rappresentare il processo attuale
-- [ ] Rappresentare il processo digitalizzato
-- [ ] Rappresentare i casi d’uso principali
-- [ ] Rappresentare il modello dati
-- [ ] Rappresentare l’architettura applicativa
-- [ ] Rappresentare il flusso di prenotazione
+- [ ] Descrivere il processo attuale di gestione eventi, prenotazioni e feedback
+- [ ] Descrivere il processo digitalizzato proposto da MuseoHub
+- [ ] Modellare attori e casi d’uso principali
+- [ ] Modellare entità dati e relazioni principali
+- [ ] Descrivere l’architettura applicativa del prototipo
+- [ ] Descrivere il flusso operativo della prenotazione guest
 
 ## Implementazione
 
