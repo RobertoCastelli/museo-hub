@@ -33,3 +33,14 @@ Diagramma di riferimento:
 Diagramma di riferimento:
 
 - [Processo digitalizzato](diagrams/processo-digitalizzato.md)
+
+## Confronto sintetico
+
+| Aspetto       | Processo attuale                      | Processo digitalizzato                   |
+| ------------- | ------------------------------------- | ---------------------------------------- |
+| Eventi        | Comunicazione tramite canali separati | Catalogo web centralizzato               |
+| Prenotazioni  | Raccolta manuale                      | Form digitale                            |
+| Disponibilità | Verifica manuale                      | Verifica automatica del sistema          |
+| Conferma      | Comunicazione manuale                 | Codice prenotazione a video              |
+| Feedback      | Raccolta non strutturata              | Feedback associato a prenotazione/evento |
+| Monitoraggio  | Dati dispersi                         | Dashboard amministrativa minima          |

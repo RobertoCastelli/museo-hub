@@ -5,7 +5,7 @@ _Serve per controllare l’avanzamento delle attività e garantire che progettaz
 
 ---
 
-## Documentazione iniziale (15/05/2026)
+## Documentazione iniziale
 
 - [x] Creare fascicolo documentale del progetto
 - [x] Standardizzare template file Markdown
@@ -14,10 +14,10 @@ _Serve per controllare l’avanzamento delle attività e garantire che progettaz
 
 ## Modellazione e diagrammi
 
-- [ ] Descrivere il processo attuale di gestione eventi, prenotazioni e feedback
-- [ ] Descrivere il processo digitalizzato proposto da MuseoHub
-- [ ] Modellare attori e casi d’uso principali
-- [ ] Modellare entità dati e relazioni principali
+- [x] Descrivere il processo attuale di gestione eventi, prenotazioni e feedback
+- [x] Descrivere il processo digitalizzato proposto da MuseoHub
+- [x] Modellare attori e casi d’uso principali
+- [x] Modellare entità dati e relazioni principali
 - [ ] Descrivere l’architettura applicativa del prototipo
 - [ ] Descrivere il flusso operativo della prenotazione guest
 

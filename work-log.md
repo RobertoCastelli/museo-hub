@@ -15,5 +15,11 @@ _Questo documento registra le sessioni di lavoro svolte durante il progetto._
 ### 002 — 15/05/2026 — 4h — Aggiornamento docs
 
 **Attività:** aggiornamento docs, revisione e formattazione testi.  
-**Output:** `docs/00-11`.  
+**Output:** `docs/`.  
 **Commit:** `docs: Update docs/*.md`
+
+### 003 — 19/05/2026 — 8h — Aggiornamento docs
+
+**Attività:** aggiornamento docs, diagrammi, revisione e formattazione testi.  
+**Output:** `docs/`.  
+**Commit:** `docs: Update docs/*.md & diagrams`
