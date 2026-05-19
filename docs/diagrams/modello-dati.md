@@ -34,8 +34,8 @@ erDiagram
 
     FEEDBACK {
         integer id PK
-        integer event_id FK
-        string booking_code
+        integer booking_id FK
+        string event_id FK
         integer rating
         string comment
     }

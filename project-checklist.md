@@ -18,7 +18,7 @@ _Serve per controllare l’avanzamento delle attività e garantire che progettaz
 - [x] Descrivere il processo digitalizzato proposto da MuseoHub
 - [x] Modellare attori e casi d’uso principali
 - [x] Modellare entità dati e relazioni principali
-- [ ] Descrivere l’architettura applicativa del prototipo
+- [x] Descrivere l’architettura applicativa del prototipo
 - [ ] Descrivere il flusso operativo della prenotazione guest
 
 ## Implementazione

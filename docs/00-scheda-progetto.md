@@ -7,10 +7,12 @@ _Contiene la traccia scelta, il contesto simulato, l’obiettivo generale, le fu
 
 ## Inquadramento del progetto
 
-- **Nome progetto:** MuseoHub
-- **Corso di studio:** L-31 Informatica per le Aziende Digitali, Università Telematica Pegaso
-- **Tema:** Tema n. 1 — La digitalizzazione dell’impresa
-- **Traccia scelta:** PW 22 — Digitalizzazione dei processi aziendali in un’impresa culturale: progettazione di una piattaforma informatica per la gestione di servizi, dati e utenti
+| Voce            | Dettaglio                                                               |
+| --------------- | ----------------------------------------------------------------------- |
+| Nome progetto   | MuseoHub                                                                |
+| Corso di studio | L-31 Informatica per le Aziende Digitali, Università Telematica Pegaso  |
+| Tema            | Tema n. 1 — La digitalizzazione dell’impresa                            |
+| Traccia scelta  | PW 22 — Digitalizzazione dei processi aziendali in un’impresa culturale |
 
 ## Contesto simulato
 
@@ -44,35 +46,23 @@ Il flusso previsto è il seguente:
 7. il sistema restituisce un codice prenotazione;
 8. l’amministratore consulta prenotazioni e indicatori di base.
 
-## Funzionalità incluse
+## Perimetro funzionale
 
-- catalogo di eventi, opere o servizi culturali;
-- pagina di dettaglio evento;
-- prenotazione guest senza registrazione utente;
-- salvataggio della prenotazione su database;
-- restituzione di un codice prenotazione e conferma a video;
-- gestione CRUD degli eventi lato amministratore;
-- elenco prenotazioni lato amministratore;
-- feedback semplice;
-- dashboard amministrativa con indicatori elementari;
-- API REST;
-- modello dati relazionale;
-- test funzionali documentati con screenshot.
-
-## Funzionalità escluse
-
-- registrazione utenti visitatori;
-- verifica email;
-- invio email reale;
-- pagamento online, poiché il prototipo considera eventi e visite gratuite;
-- QR code biglietto, escluso dal perimetro minimo, ma valutabile come estensione del prototipo;
-- reset password;
-- ruoli amministrativi complessi;
-- notifiche push;
-- integrazione calendario;
-- analytics avanzati;
-- intelligenza artificiale operativa;
-- hardening cybersecurity da produzione.
+| Funzionalità incluse                                | Funzionalità escluse                           |
+| --------------------------------------------------- | ---------------------------------------------- |
+| Catalogo di eventi, opere o servizi culturali.      | Registrazione utenti visitatori.               |
+| Pagina di dettaglio evento.                         | Verifica email.                                |
+| Prenotazione guest senza registrazione utente.      | Invio email reale.                             |
+| Salvataggio della prenotazione su database.         | Pagamento online.                              |
+| Codice prenotazione e conferma a video.             | QR code biglietto, valutabile come estensione. |
+| Feedback semplice tramite codice prenotazione.      | Reset password.                                |
+| Gestione CRUD degli eventi lato amministratore.     | Ruoli amministrativi complessi.                |
+| Elenco prenotazioni lato amministratore.            | Notifiche push.                                |
+| Consultazione feedback lato amministratore.         | Integrazione calendario.                       |
+| Dashboard amministrativa con indicatori elementari. | Analytics avanzati.                            |
+| API REST.                                           | Intelligenza artificiale operativa.            |
+| Modello dati relazionale.                           | Hardening cybersecurity da produzione.         |
+| Test funzionali documentati con screenshot.         |                                                |
 
 ## Stack tecnologico
 
