@@ -18,8 +18,8 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** aggiornamento dei documenti di analisi, requisiti, processi, casi d’uso, diagrammi e modello dati preliminare; revisione di coerenza anche sui documenti già prodotti.  
 **Riferimento Git:** commit del 19/05/2026 relativo ad aggiornamento documentazione e diagrammi.
 
-### 003 — 19/05/2026 — Architettura applicativa
+### 003 — 19/05/2026-20/05/2026 — Architettura e API preliminari
 
-**Fase:** progettazione architetturale preliminare.  
-**Attività:** definizione dell’architettura web client-server, delle responsabilità di front-end, back-end e database, e aggiornamento del diagramma architetturale.  
-**Riferimento Git:** commit relativo all’aggiornamento della documentazione architetturale.
+**Fase:** progettazione tecnica preliminare.  
+**Attività:** definizione dell’architettura web client-server, aggiornamento del diagramma architetturale e prima mappatura degli endpoint API previsti.  
+**Riferimento Git:** commit relativo all’aggiornamento di architettura e documentazione API.

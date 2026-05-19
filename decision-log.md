@@ -9,5 +9,5 @@ _Questo documento registra le principali decisioni progettuali prese durante lo 
 - D003 - **Stack:** React / Express / SQLite / Render
 - D004 - **Strumenti:** Markdown e Mermaid per la documentazione
 - D005 - **Editor:** Visual Studio Code e Vim
-- D006 - **Tipo prenotazione:** guest / no registrazione
+- D006 - **Tipo prenotazione:** guest / no registrazione / massimo 4 partecipanti per prenotazione
 - D007 - **Tipo eventi:** gratuiti / no pagamenti
