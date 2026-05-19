@@ -76,7 +76,7 @@ I nomi dei campi potranno essere adattati durante l’implementazione del backen
 | ------------------------------- | ------------------------------------------------------------------------------- |
 | Prenotazione collegata a evento | Ogni prenotazione deve riferirsi a un evento esistente.                         |
 | Codice prenotazione univoco     | Ogni prenotazione deve avere un codice identificativo non duplicato.            |
-| Partecipanti validi             | Il numero di partecipanti deve essere > 0 .                                     |
+| Partecipanti validi             | Il numero di partecipanti deve essere compreso tra 1 e 4.                       |
 | Disponibilità sufficiente       | La prenotazione viene accettata solo se la disponibilità residua è sufficiente. |
 | Feedback collegato              | Il feedback deve essere riconducibile a una prenotazione o a un evento.         |
 | Stato evento                    | Un evento può essere visibile o non visibile tramite uno stato.                 |

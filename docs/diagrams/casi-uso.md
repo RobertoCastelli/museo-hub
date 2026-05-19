@@ -7,28 +7,34 @@ _Serve a sintetizzare le azioni previste per visitatore e amministratore._
 
 ```mermaid
 flowchart LR
-    Visitatore[Visitatore]
-    Admin[Amministratore]
+    V([Visitatore])
+    A([Amministratore])
 
-    UC01((Consultare catalogo))
-    UC02((Visualizzare dettaglio evento))
-    UC03((Effettuare prenotazione guest))
-    UC04((Ricevere codice prenotazione))
-    UC05((Inviare feedback))
+    subgraph PUB["Area pubblica MuseoHub"]
+        direction TB
+        UC01((UC01 Consultare catalogo))
+        UC02((UC02 Visualizzare dettaglio evento))
+        UC03((UC03 Effettuare prenotazione guest))
+        UC04((UC04 Ricevere codice prenotazione))
+        UC05((UC05 Inviare feedback tramite codice))
+    end
 
-    UC06((Gestire eventi))
-    UC07((Consultare prenotazioni))
-    UC08((Consultare feedback))
-    UC09((Visualizzare dashboard))
+    subgraph ADM["Area amministrativa MuseoHub"]
+        direction TB
+        UC06((UC06 Gestire eventi))
+        UC07((UC07 Consultare prenotazioni))
+        UC08((UC08 Consultare feedback))
+        UC09((UC09 Visualizzare dashboard))
+    end
 
-    Visitatore --> UC01
-    Visitatore --> UC02
-    Visitatore --> UC03
-    UC03 --> UC04
-    Visitatore --> UC05
+    V --> UC01
+    V --> UC02
+    V --> UC03
+    UC03 -. include .-> UC04
+    V --> UC05
 
-    Admin --> UC06
-    Admin --> UC07
-    Admin --> UC08
-    Admin --> UC09
+    A --> UC06
+    A --> UC07
+    A --> UC08
+    A --> UC09
 ```

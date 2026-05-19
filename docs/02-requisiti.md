@@ -41,7 +41,7 @@ _Serve a trasformare il problema iniziale in specifiche verificabili, collegando
 
 - Il progetto riguarda una realtà museale simulata.
 - Gli eventi e le visite considerate sono gratuiti.
-- La prenotazione è guest e non richiede registrazione del visitatore.
+- La prenotazione è guest, non richiede registrazione del visitatore e può includere al massimo 4 partecipanti.
 - La conferma della prenotazione avviene a video tramite codice.
 - Le scelte tecniche devono essere coerenti con lo stack stabilito per MuseoHub.
 
