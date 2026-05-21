@@ -1,7 +1,7 @@
 # Analisi del problema
 
 _Questo documento descrive il problema aziendale e organizzativo che il progetto intende affrontare._
-_Serve a chiarire il contesto della realtà museale simulata, le criticità del processo attuale e il motivo per cui viene proposta una soluzione digitale._
+_Chiarisce il contesto della realtà museale simulata, le criticità del processo attuale e il motivo per cui viene proposta una soluzione digitale._
 
 ---
 

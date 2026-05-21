@@ -23,3 +23,9 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Fase:** progettazione tecnica preliminare.  
 **Attività:** definizione dell’architettura web client-server, aggiornamento del diagramma architetturale e prima mappatura degli endpoint API previsti.  
 **Riferimento Git:** commit relativo all’aggiornamento di architettura e documentazione API.
+
+### 004 — 20/05/2026 — Pseudocodice e coerenza logica
+
+**Fase:** progettazione logica preliminare.  
+**Attività:** completamento del pseudocodice per prenotazione, feedback e dashboard; revisione di coerenza della documentazione.  
+**Riferimento Git:** commit relativo all’aggiornamento della documentazione logica.

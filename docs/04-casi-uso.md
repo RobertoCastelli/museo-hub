@@ -1,7 +1,7 @@
 # Casi d’uso
 
 _Questo documento descrive gli attori del sistema e i principali casi d’uso del prototipo MuseoHub._
-_Serve a rappresentare le interazioni tra visitatore, amministratore e piattaforma, prima della progettazione tecnica dettagliata._
+_Rappresenta le interazioni tra visitatore, amministratore e piattaforma._
 
 ---
 
@@ -24,7 +24,7 @@ I casi d’uso considerano due attori principali, già individuati nei requisiti
 | UC06   | Amministratore | Gestire eventi                | L’amministratore crea, modifica o elimina eventi.                |
 | UC07   | Amministratore | Consultare prenotazioni       | L’amministratore visualizza le prenotazioni ricevute.            |
 | UC08   | Amministratore | Consultare feedback           | L’amministratore visualizza i feedback inviati.                  |
-| UC09   | Amministratore | Visualizzare dashboard        | L’amministratore consulta indicatori minimi sulle attività.      |
+| UC09   | Amministratore | Visualizzare dashboard        | L’amministratore consulta indicatori sulle attività.             |
 
 Diagramma di riferimento:
 

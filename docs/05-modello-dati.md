@@ -1,7 +1,7 @@
 # Modello dati
 
 _Questo documento descrive la progettazione della base dati del prototipo MuseoHub._
-_Serve a definire entità, relazioni, tabelle, chiavi e vincoli principali necessari per gestire eventi, prenotazioni, feedback ed eventuali utenti amministratori._
+_Definisce entità, relazioni, tabelle, chiavi e vincoli principali necessari per gestire eventi, prenotazioni, feedback ed amministratori._
 
 ---
 
@@ -36,7 +36,7 @@ I nomi dei campi potranno essere adattati durante l’implementazione del backen
 
 - id;
 - riferimento all’evento;
-- Codice prenotazione;
+- codice prenotazione;
 - nome del visitatore;
 - email del visitatore;
 - numero di partecipanti;
@@ -46,8 +46,7 @@ I nomi dei campi potranno essere adattati durante l’implementazione del backen
 ### Feedback
 
 - id;
-- riferimento all’evento;
-- riferiemento alla prenotazione;
+- codice prenotazione;
 - nome del visitatore;
 - valutazione;
 - commento;
@@ -62,13 +61,13 @@ I nomi dei campi potranno essere adattati durante l’implementazione del backen
 
 ### Relazioni principali
 
-| Relazione               | Descrizione                                                     |
-| ----------------------- | --------------------------------------------------------------- |
-| Evento → Prenotazione   | Un evento può ricevere più prenotazioni.                        |
-| Prenotazione → Evento   | Ogni prenotazione è collegata a un solo evento.                 |
-| Evento → Feedback       | Un evento può ricevere più feedback.                            |
-| Prenotazione → Feedback | Un feedback può essere collegato a una prenotazione registrata. |
-| Amministratore → Evento | L’amministratore può gestire eventi o servizi culturali.        |
+| Relazione               | Descrizione                                                |
+| ----------------------- | ---------------------------------------------------------- |
+| Evento → Prenotazione   | Un evento può ricevere più prenotazioni.                   |
+| Prenotazione → Evento   | Ogni prenotazione è collegata a un solo evento.            |
+| Evento → Feedback       | Un evento può ricevere più feedback.                       |
+| Prenotazione → Feedback | Un feedback può essere collegato a un codice prenotazione. |
+| Amministratore → Evento | L’amministratore può gestire eventi o servizi culturali.   |
 
 ### Vincoli logici
 

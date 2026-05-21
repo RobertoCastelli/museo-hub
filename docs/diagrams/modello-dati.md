@@ -25,7 +25,7 @@ erDiagram
     BOOKINGS {
         integer id PK
         integer event_id FK
-        string booking_code
+        string booking_code UK
         string visitor_name
         string visitor_email
         integer participants
@@ -34,8 +34,8 @@ erDiagram
 
     FEEDBACK {
         integer id PK
-        integer booking_id FK
-        string event_id FK
+        integer event_id FK
+        string booking_code FK
         integer rating
         string comment
     }

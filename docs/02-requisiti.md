@@ -1,7 +1,7 @@
 # Requisiti
 
 _Questo documento raccoglie i requisiti funzionali, non funzionali e i vincoli progettuali del prototipo MuseoHub._
-_Serve a trasformare il problema iniziale in specifiche verificabili, collegando ogni funzione prevista agli obiettivi del Project Work._
+_Trasforma il problema iniziale in specifiche verificabili, collegando ogni funzione prevista agli obiettivi del Project Work._
 
 ---
 
@@ -12,19 +12,19 @@ _Serve a trasformare il problema iniziale in specifiche verificabili, collegando
 
 ## Requisiti funzionali
 
-| Codice | Area     | Requisito                  | Descrizione sintetica                                                  |
-| ------ | -------- | -------------------------- | ---------------------------------------------------------------------- |
-| RF01   | Pubblica | Consultazione catalogo     | Il visitatore consulta eventi, visite o servizi culturali disponibili. |
-| RF02   | Pubblica | Dettaglio evento           | Il visitatore visualizza le informazioni principali di un evento.      |
-| RF03   | Pubblica | Prenotazione guest         | Il visitatore effettua una prenotazione senza registrazione.           |
-| RF04   | Pubblica | Dati prenotazione          | Il visitatore inserisce nome, email e numero di partecipanti.          |
-| RF05   | Sistema  | Controllo disponibilità    | Il sistema verifica la disponibilità residua prima della conferma.     |
-| RF06   | Sistema  | Codice prenotazione        | Il sistema salva la prenotazione e restituisce un codice a video.      |
-| RF07   | Pubblica | Feedback tramite codice    | Il visitatore invia un feedback usando il codice prenotazione.         |
-| RF08   | Admin    | Gestione eventi            | L’amministratore crea, modifica ed elimina eventi o servizi culturali. |
-| RF09   | Admin    | Consultazione prenotazioni | L’amministratore visualizza le prenotazioni ricevute.                  |
-| RF10   | Admin    | Consultazione feedback     | L’amministratore visualizza i feedback inviati.                        |
-| RF11   | Admin    | Dashboard minima           | L’amministratore consulta indicatori elementari sulle attività.        |
+| Codice | Area     | Requisito                  | Descrizione sintetica                                                        |
+| ------ | -------- | -------------------------- | ---------------------------------------------------------------------------- |
+| RF01   | Pubblica | Consultazione catalogo     | Il visitatore consulta eventi, visite o servizi culturali disponibili.       |
+| RF02   | Pubblica | Dettaglio evento           | Il visitatore visualizza le informazioni principali di un evento.            |
+| RF03   | Pubblica | Prenotazione guest         | Il visitatore effettua una prenotazione senza registrazione.                 |
+| RF04   | Pubblica | Dati prenotazione          | Il visitatore inserisce nome, email e numero di partecipanti.                |
+| RF05   | Sistema  | Controllo disponibilità    | Il sistema verifica la disponibilità residua prima della conferma.           |
+| RF06   | Sistema  | Codice prenotazione        | Il sistema salva la prenotazione e restituisce un codice a video.            |
+| RF07   | Pubblica | Feedback tramite codice    | Il visitatore invia un feedback usando il codice prenotazione.               |
+| RF08   | Admin    | Gestione eventi            | L’amministratore crea, modifica ed elimina eventi o servizi culturali.       |
+| RF09   | Admin    | Consultazione prenotazioni | L’amministratore visualizza le prenotazioni ricevute.                        |
+| RF10   | Admin    | Consultazione feedback     | L’amministratore visualizza i feedback inviati.                              |
+| RF11   | Admin    | Dashboard                  | L’amministratore consulta indicatori generali e un riepilogo sulle attività. |
 
 ## Requisiti non funzionali
 
