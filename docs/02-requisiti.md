@@ -31,7 +31,7 @@ _Trasforma il problema iniziale in specifiche verificabili, collegando ogni funz
 | Codice | Requisito              | Descrizione sintetica                                                            |
 | ------ | ---------------------- | -------------------------------------------------------------------------------- |
 | RNF01  | Usabilità              | L’interfaccia deve essere semplice e comprensibile per utenti non tecnici        |
-| RNF02  | Responsività           | Il front-end deve essere consultabile da desktop e dispositivi mobili            |
+| RNF02  | Responsività           | Il frontend deve essere consultabile da desktop e dispositivi mobili             |
 | RNF03  | Separazione componenti | Il progetto deve distinguere interfaccia, logica applicativa e gestione dati     |
 | RNF04  | Persistenza dati       | I dati principali devono essere salvati in modo strutturato                      |
 | RNF05  | Documentabilità        | Scelte progettuali, flussi e test devono essere documentati nel repository       |

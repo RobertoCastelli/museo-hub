@@ -1,7 +1,7 @@
 # Architettura
 
 _Questo documento descrive l’architettura applicativa del prototipo MuseoHub._
-_Rappresenta la separazione tra front-end, back-end, database e API, chiarendo il ruolo di ogni componente e le modalità di comunicazione tra le parti._
+_Rappresenta la separazione tra frontend, backend, database e API, chiarendo il ruolo di ogni componente e le modalità di comunicazione tra le parti._
 
 ---
 
@@ -9,23 +9,23 @@ _Rappresenta la separazione tra front-end, back-end, database e API, chiarendo i
 
 MuseoHub adotta un’architettura web client-server.
 
-- Il front-end gestisce l’interfaccia utente e invia richieste HTTP al back-end.
-- Il back-end rende disponibili endpoint API per leggere e inviare dati, gestisce la logica applicativa e comunica con il database.
+- Il frontend gestisce l’interfaccia utente e invia richieste HTTP al backend.
+- Il backend rende disponibili endpoint API per leggere e inviare dati, gestisce la logica applicativa e comunica con il database.
 - Il database conserva i dati relativi a eventi, prenotazioni, feedback ed eventuale accesso amministrativo.
 
 ## Componenti principali
 
-| Componente       | Tecnologia        | Responsabilità                                                                  |
-| ---------------- | ----------------- | ------------------------------------------------------------------------------- |
-| Front-end        | React + Vite      | Interfaccia utente, navigazione, form e visualizzazione dati                    |
-| Back-end         | Node.js + Express | API REST, logica applicativa, validazione delle richieste e accesso ai dati     |
-| Database         | SQLite            | Persistenza strutturata di eventi, prenotazioni, feedback e dati amministrativi |
-| Deploy front-end | Netlify           | Pubblicazione dell’interfaccia web                                              |
-| Deploy back-end  | Render            | Pubblicazione del servizio API                                                  |
+| Componente      | Tecnologia        | Responsabilità                                                                  |
+| --------------- | ----------------- | ------------------------------------------------------------------------------- |
+| Frontend        | React + Vite      | Interfaccia utente, navigazione, form e visualizzazione dati                    |
+| Backend         | Node.js + Express | API REST, logica applicativa, validazione delle richieste e accesso ai dati     |
+| Database        | SQLite            | Persistenza strutturata di eventi, prenotazioni, feedback e dati amministrativi |
+| Deploy frontend | Netlify           | Pubblicazione dell’interfaccia web                                              |
+| Deploy backend  | Render            | Pubblicazione del servizio API                                                  |
 
-## Front-end
+## Frontend
 
-Il front-end rappresenta il punto di accesso per visitatore e amministratore.
+Il frontend rappresenta il punto di accesso per visitatore e amministratore.
 
 - visualizzare catalogo e dettaglio degli eventi;
 - gestire il form di prenotazione guest;
@@ -34,12 +34,12 @@ Il front-end rappresenta il punto di accesso per visitatore e amministratore.
 - visualizzare le sezioni amministrative;
 - mostrare dati e indicatori ricevuti dal back-end.
 
-## Back-end
+## Backend
 
-Il back-end gestisce la logica applicativa del prototipo.
+Il backend gestisce la logica applicativa del prototipo.
 
 - rendere disponibili endpoint API;
-- ricevere e validare richieste dal front-end;
+- ricevere e validare richieste dal frontend;
 - verificare la disponibilità residua prima della prenotazione;
 - generare il codice prenotazione;
 - salvare e leggere dati dal database;
@@ -60,15 +60,15 @@ Lo schema fisico definitivo sarà precisato durante l’implementazione del back
 
 ## Comunicazione tra componenti
 
-La comunicazione tra front-end e back-end avviene tramite richieste HTTP verso API REST.
+La comunicazione tra frontend e backend avviene tramite richieste HTTP verso API REST.
 
 Il flusso generale è:
 
-1. il front-end invia una richiesta al back-end;
-2. il back-end valida la richiesta;
-3. il back-end legge o modifica i dati nel database;
-4. il back-end restituisce una risposta al front-end;
-5. il front-end aggiorna l’interfaccia utente.
+1. il frontend invia una richiesta al back-end;
+2. il backend valida la richiesta;
+3. il backend legge o modifica i dati nel database;
+4. il backend restituisce una risposta al front-end;
+5. il frontend aggiorna l’interfaccia utente.
 
 Diagramma di riferimento:
 

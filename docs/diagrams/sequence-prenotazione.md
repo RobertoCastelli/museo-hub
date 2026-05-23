@@ -8,8 +8,8 @@ _Mostra l’interazione tra visitatore, front-end, back-end e database durante v
 ```mermaid
 sequenceDiagram
     actor V as Visitatore
-    participant FE as Front-end React
-    participant BE as Back-end Express
+    participant FE as Frontend React
+    participant BE as Backend Express
     participant DB as Database SQLite
 
     V->>FE: Compila form prenotazione

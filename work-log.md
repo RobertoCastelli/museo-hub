@@ -34,4 +34,10 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 
 **Fase:** avvio dell’implementazione backend.  
 **Attività:** inizializzazione del progetto Node/Express, configurazione delle dipendenze principali e verifica dell’endpoint tecnico `/api/health`.  
-**Riferimento Git:** commit relativo all'inizializzazione del back-end Express.
+**Riferimento Git:** commit relativo all'inizializzazione del backend Express.
+
+### 006 — 23/05/2026 — Setup database SQLite
+
+**Fase:** predisposizione della persistenza dati.  
+**Attività:** installazione delle dipendenze SQLite, creazione dello schema SQL iniziale, configurazione del modulo di apertura database e script di inizializzazione locale.  
+**Riferimento Git:** commit relativo al setup SQLite del backend.

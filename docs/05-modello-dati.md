@@ -1,7 +1,7 @@
 # Modello dati
 
 _Questo documento descrive la progettazione della base dati del prototipo MuseoHub._
-_Definisce entità, relazioni, tabelle, chiavi e vincoli principali necessari per gestire eventi, prenotazioni, feedback ed amministratori._
+_Definisce entità, relazioni, tabelle, chiavi e vincoli principali necessari per gestire eventi, prenotazioni, feedback e amministratori._
 
 ---
 
@@ -46,6 +46,7 @@ I nomi dei campi potranno essere adattati durante l’implementazione del backen
 ### Feedback
 
 - id;
+- riferimento all'evento;
 - codice prenotazione;
 - nome del visitatore;
 - valutazione;
@@ -56,8 +57,7 @@ I nomi dei campi potranno essere adattati durante l’implementazione del backen
 
 - id;
 - username;
-- credenziale protetta;
-- ruolo semplice.
+- ruolo amministrativo semplice.
 
 ### Relazioni principali
 
@@ -71,14 +71,14 @@ I nomi dei campi potranno essere adattati durante l’implementazione del backen
 
 ### Vincoli logici
 
-| Vincolo                         | Descrizione                                                                    |
-| ------------------------------- | ------------------------------------------------------------------------------ |
-| Prenotazione collegata a evento | Ogni prenotazione deve riferirsi a un evento esistente                         |
-| Codice prenotazione univoco     | Ogni prenotazione deve avere un codice identificativo non duplicato            |
-| Partecipanti validi             | Il numero di partecipanti deve essere compreso tra 1 e 4                       |
-| Disponibilità sufficiente       | La prenotazione viene accettata solo se la disponibilità residua è sufficiente |
-| Feedback collegato              | Il feedback deve essere riconducibile a una prenotazione o a un evento         |
-| Stato evento                    | Un evento può essere visibile o non visibile tramite uno stato                 |
+| Vincolo                         | Descrizione                                                                                        |
+| ------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Prenotazione collegata a evento | Ogni prenotazione deve riferirsi a un evento esistente                                             |
+| Codice prenotazione univoco     | Ogni prenotazione deve avere un codice identificativo non duplicato                                |
+| Partecipanti validi             | Il numero di partecipanti deve essere compreso tra 1 e 4                                           |
+| Disponibilità sufficiente       | La prenotazione viene accettata solo se la disponibilità residua è sufficiente                     |
+| Feedback collegato              | Il feedback deve essere riconducibile a una prenotazione tramite codice prenotazione e a un evento |
+| Stato evento                    | Un evento può essere visibile o non visibile tramite uno stato                                     |
 
 Diagramma di riferimento:
 

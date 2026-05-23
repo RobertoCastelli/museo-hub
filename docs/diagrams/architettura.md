@@ -1,15 +1,15 @@
 # Architettura
 
 _Questo diagramma rappresenta l’architettura applicativa preliminare di MuseoHub._  
-_Mostra la comunicazione tra front-end, back-end, database e servizi di deploy._
+_Mostra la comunicazione tra frontend, backend, database e servizi di deploy._
 
 ---
 
 ```mermaid
 flowchart LR
-    U[Visitatore / Amministratore] --> FE[Front-end React + Vite]
+    U[Visitatore / Amministratore] --> FE[Frontend React + Vite]
 
-    FE -->|Richieste HTTP / API REST| BE[Back-end Node.js + Express]
+    FE -->|Richieste HTTP / API REST| BE[Backend Node.js + Express]
 
     BE -->|Query e aggiornamenti| DB[(SQLite Database)]
 

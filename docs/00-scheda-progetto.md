@@ -90,7 +90,7 @@ Il flusso previsto è il seguente:
 - API REST documentate;
 - test funzionali con screenshot;
 - istruzioni di esecuzione locale;
-- eventuale deploy del front-end e del back-end;
+- eventuale deploy del frontend e del backend;
 - report finale secondo il template Pegaso.
 
 ## Criterio di successo

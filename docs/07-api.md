@@ -1,7 +1,7 @@
 # API
 
 _Questo documento descrive le API REST previste per il prototipo MuseoHub_  
-_Definisce il contratto preliminare di comunicazione tra front-end React, back-end Express e database._
+_Definisce il contratto preliminare di comunicazione tra frontend React, backend Express e database._
 
 ---
 

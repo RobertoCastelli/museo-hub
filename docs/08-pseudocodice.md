@@ -1,7 +1,7 @@
 # Pseudocodice
 
 _Questo documento raccoglie il pseudocodice delle principali logiche applicative del prototipo MuseoHub._
-_Descrive in modo indipendente dal linguaggio di programmazione i passaggi logici più importanti prima dell'implementazione del back-end._
+_Descrive in modo indipendente dal linguaggio di programmazione i passaggi logici più importanti prima dell'implementazione del backend._
 
 ---
 
@@ -14,13 +14,14 @@ FUNZIONE creaPrenotazione(event_id, visitor_name, visitor_email, participants)
     IF event_id non esiste
         return errore "evento non trovato"
     IF participants <= 0 OR participants > 4
-        return errore "numero participants non valido"
+        return errore "numero partecipanti non valido"
     IF available_slots evento < participants
         return errore "disponibilità insufficiente"
 
     codice = creaCodicePrenotazione()
     salvaPrenotazione(event_id, visitor_name, visitor_email, participants, codice)
     aggiornaAvailableSlots(event_id, participants)
+
     return conferma con codice prenotazione
 FINE FUNZIONE
 
@@ -33,6 +34,7 @@ FUNZIONE creaCodicePrenotazione()
     codice = generaCodiceTemporaneo()
     WHILE codice esiste già tra le prenotazioni
         codice = generaCodiceTemporaneo()
+
     return codice
 FINE FUNZIONE
 ```
@@ -51,7 +53,9 @@ FUNZIONE registraFeedback(booking_code, rating, comment)
     IF prenotazione non esiste
         return errore "codice prenotazione non valido"
 
-    salvaFeedback(booking_code, rating, comment)
+    recupera event_id dalla prenotazione
+    salvaFeedback(event_id, booking_code, rating, comment)
+
     return conferma registrazione feedback
 FINE FUNZIONE
 ```

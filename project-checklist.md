@@ -25,9 +25,9 @@ _Serve per controllare l’avanzamento delle attività e garantire che progettaz
 
 - [x] Creare struttura `server/`
 - [x] Implementare backend Express
-- [ ] Creare database SQLite
+- [x] Creare database SQLite
 - [ ] Implementare API REST principali
-- [ ] Creare struttura `client/`
+- [x] Creare struttura `client/`
 - [ ] Implementare frontend React
 - [ ] Integrare frontend e backend
 
