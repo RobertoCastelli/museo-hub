@@ -29,3 +29,9 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Fase:** progettazione logica preliminare.  
 **Attività:** completamento del pseudocodice delle logiche principali e rappresentazione del flusso tecnico della prenotazione guest tramite sequence diagram.  
 **Riferimento Git:** commit relativo all’aggiornamento della documentazione logica e dei diagrammi.
+
+### 005 — 23/05/2026 — Backend Express iniziale
+
+**Fase:** avvio dell’implementazione backend.  
+**Attività:** inizializzazione del progetto Node/Express, configurazione delle dipendenze principali e verifica dell’endpoint tecnico `/api/health`.  
+**Riferimento Git:** commit relativo all'inizializzazione del back-end Express.
