@@ -1,7 +1,7 @@
 # Limiti e sviluppi futuri
 
 _Questo documento raccoglie i limiti consapevoli del prototipo MuseoHub e le possibili evoluzioni future._
-_Serve a distinguere ciò che è stato implementato nel Project Work da funzionalità più avanzate escluse dal perimetro_
+_Distingue ciò che è stato implementato nel Project Work da funzionalità più avanzate escluse dal perimetro_
 
 ---
 

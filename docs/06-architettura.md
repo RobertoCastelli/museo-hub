@@ -15,13 +15,13 @@ MuseoHub adotta un’architettura web client-server.
 
 ## Componenti principali
 
-| Componente       | Tecnologia        | Responsabilità                                                                   |
-| ---------------- | ----------------- | -------------------------------------------------------------------------------- |
-| Front-end        | React + Vite      | Interfaccia utente, navigazione, form e visualizzazione dati.                    |
-| Back-end         | Node.js + Express | API REST, logica applicativa, validazione delle richieste e accesso ai dati.     |
-| Database         | SQLite            | Persistenza strutturata di eventi, prenotazioni, feedback e dati amministrativi. |
-| Deploy front-end | Netlify           | Pubblicazione dell’interfaccia web.                                              |
-| Deploy back-end  | Render            | Pubblicazione del servizio API.                                                  |
+| Componente       | Tecnologia        | Responsabilità                                                                  |
+| ---------------- | ----------------- | ------------------------------------------------------------------------------- |
+| Front-end        | React + Vite      | Interfaccia utente, navigazione, form e visualizzazione dati                    |
+| Back-end         | Node.js + Express | API REST, logica applicativa, validazione delle richieste e accesso ai dati     |
+| Database         | SQLite            | Persistenza strutturata di eventi, prenotazioni, feedback e dati amministrativi |
+| Deploy front-end | Netlify           | Pubblicazione dell’interfaccia web                                              |
+| Deploy back-end  | Render            | Pubblicazione del servizio API                                                  |
 
 ## Front-end
 

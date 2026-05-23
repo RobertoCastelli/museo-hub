@@ -71,3 +71,7 @@ FUNZIONE calcolaDashboard()
     return totale_eventi, totale_prenotazioni, totale_partecipanti, totale_feedback, riepilogo_eventi
 FINE FUNZIONE
 ```
+
+Diagramma di riferimento:
+
+- [Sequence prenotazione](diagrams/sequence-prenotazione.md)

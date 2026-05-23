@@ -61,24 +61,24 @@ I nomi dei campi potranno essere adattati durante l’implementazione del backen
 
 ### Relazioni principali
 
-| Relazione               | Descrizione                                                |
-| ----------------------- | ---------------------------------------------------------- |
-| Evento → Prenotazione   | Un evento può ricevere più prenotazioni.                   |
-| Prenotazione → Evento   | Ogni prenotazione è collegata a un solo evento.            |
-| Evento → Feedback       | Un evento può ricevere più feedback.                       |
-| Prenotazione → Feedback | Un feedback può essere collegato a un codice prenotazione. |
-| Amministratore → Evento | L’amministratore può gestire eventi o servizi culturali.   |
+| Relazione               | Descrizione                                               |
+| ----------------------- | --------------------------------------------------------- |
+| Evento → Prenotazione   | Un evento può ricevere più prenotazioni                   |
+| Prenotazione → Evento   | Ogni prenotazione è collegata a un solo evento            |
+| Evento → Feedback       | Un evento può ricevere più feedback                       |
+| Prenotazione → Feedback | Un feedback può essere collegato a un codice prenotazione |
+| Amministratore → Evento | L’amministratore può gestire eventi o servizi culturali   |
 
 ### Vincoli logici
 
-| Vincolo                         | Descrizione                                                                     |
-| ------------------------------- | ------------------------------------------------------------------------------- |
-| Prenotazione collegata a evento | Ogni prenotazione deve riferirsi a un evento esistente.                         |
-| Codice prenotazione univoco     | Ogni prenotazione deve avere un codice identificativo non duplicato.            |
-| Partecipanti validi             | Il numero di partecipanti deve essere compreso tra 1 e 4.                       |
-| Disponibilità sufficiente       | La prenotazione viene accettata solo se la disponibilità residua è sufficiente. |
-| Feedback collegato              | Il feedback deve essere riconducibile a una prenotazione o a un evento.         |
-| Stato evento                    | Un evento può essere visibile o non visibile tramite uno stato.                 |
+| Vincolo                         | Descrizione                                                                    |
+| ------------------------------- | ------------------------------------------------------------------------------ |
+| Prenotazione collegata a evento | Ogni prenotazione deve riferirsi a un evento esistente                         |
+| Codice prenotazione univoco     | Ogni prenotazione deve avere un codice identificativo non duplicato            |
+| Partecipanti validi             | Il numero di partecipanti deve essere compreso tra 1 e 4                       |
+| Disponibilità sufficiente       | La prenotazione viene accettata solo se la disponibilità residua è sufficiente |
+| Feedback collegato              | Il feedback deve essere riconducibile a una prenotazione o a un evento         |
+| Stato evento                    | Un evento può essere visibile o non visibile tramite uno stato                 |
 
 Diagramma di riferimento:
 
