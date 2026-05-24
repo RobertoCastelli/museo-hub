@@ -1,4 +1,4 @@
-// Load enviroment variables
+// Variables and modules for server setup
 require("dotenv").config();
 const app = require("./app");
 

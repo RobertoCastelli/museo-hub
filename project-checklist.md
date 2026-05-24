@@ -26,15 +26,15 @@ _Serve per controllare l’avanzamento delle attività e garantire che progettaz
 - [x] Creare struttura `server/`
 - [x] Implementare backend Express
 - [x] Creare database SQLite
-- [ ] Implementare API REST principali
+- [x] Implementare API REST principali
 - [x] Creare struttura `client/`
 - [ ] Implementare frontend React
 - [ ] Integrare frontend e backend
 
 ## Test e deploy
 
-- [ ] Documentare test funzionali
-- [ ] Salvare screenshot principali
+- [x] Documentare test funzionali
+- [x] Salvare screenshot principali
 - [ ] Pubblicare frontend su Netlify
 - [ ] Pubblicare backend su Render (se sostenibile)
 - [ ] Documentare istruzioni di esecuzione

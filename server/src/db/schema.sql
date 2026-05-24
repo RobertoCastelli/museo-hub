@@ -1,3 +1,4 @@
+-- Events table: stores cultural events available in the public catalog
 CREATE TABLE IF NOT EXISTS events (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
@@ -9,6 +10,7 @@ CREATE TABLE IF NOT EXISTS events (
     created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Bookings table: stores guest reservations associated with event
 CREATE TABLE IF NOT EXISTS bookings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     event_id INTEGER NOT NULL,
@@ -21,6 +23,7 @@ CREATE TABLE IF NOT EXISTS bookings (
     FOREIGN KEY (event_id) REFERENCES events(id)
 );
 
+-- Feedback table: stores visitor ratings linked to booking codes
 CREATE TABLE IF NOT EXISTS feedback (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     event_id INTEGER NOT NULL,
@@ -32,6 +35,7 @@ CREATE TABLE IF NOT EXISTS feedback (
     FOREIGN KEY (event_id) REFERENCES events(id)
 );
 
+-- Admin users table: minimal placeholder for administrative users
 CREATE TABLE IF NOT EXISTS admin_users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL UNIQUE,

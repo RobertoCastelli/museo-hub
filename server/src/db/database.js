@@ -1,8 +1,8 @@
-// Open a connection: Node --> SQLite database
+// Import SQLite driver and helper library
 const sqlite3 = require("sqlite3");
 const { open } = require("sqlite");
 
-// Open the database connection
+// Open a connection to the MuseoHub SQLite database
 async function openDb() {
   const db = await open({
     filename: "./src/db/museohub.sqlite",
@@ -11,5 +11,5 @@ async function openDb() {
   return db;
 }
 
-// Export the openDb function
+// Export the database connection function
 module.exports = openDb;

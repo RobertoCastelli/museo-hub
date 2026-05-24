@@ -1,15 +1,21 @@
-// Import required modules
+// Import Express and middleware modules
 const express = require("express");
 const cors = require("cors");
 
-// Create the Express application
+// Import route modules
+const eventsRoutes = require("./routes/eventsRoutes");
+
+// Create the Express application istance
 const app = express();
 
-// Global Middleware
+// Global Middleware configuration
 app.use(cors());
 app.use(express.json());
 
-// Health check routes
+// Events API routes
+app.use("/api/events", eventsRoutes);
+
+// Health check endpoint
 app.get("/api/health", (req, res) => {
   res.status(200).json({
     status: "ok",
@@ -17,5 +23,5 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// Export the Express app
+// Export configured Express app
 module.exports = app;
