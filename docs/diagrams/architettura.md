@@ -20,7 +20,24 @@ flowchart LR
     BE -. deploy .-> REN[Render]
 ```
 
-## Nota sul livello di dettaglio
+## Flusso backend e database
 
-Il diagramma rappresenta l’architettura preliminare del prototipo.  
-Gli endpoint specifici saranno descritti nel documento dedicato alle API.
+```mermaid
+flowchart TD
+    APP[app.js] --> EVENTS[eventsRoutes.js]
+    APP --> BOOKINGS[bookingsRoutes.js]
+    APP --> FEEDBACK[feedbackRoutes.js]
+    APP --> DASHBOARD[dashboardRoutes.js]
+
+    EVENTS --> DBJS[database.js]
+    BOOKINGS --> DBJS
+    FEEDBACK --> DBJS
+    DASHBOARD --> DBJS
+
+    DBJS --> SQLITE[(museohub.sqlite)]
+
+    SCHEMA[schema.sql] --> INIT[initDb.js]
+    INIT --> SQLITE
+
+    SEED[seedDb.js] --> SQLITE
+```

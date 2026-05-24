@@ -70,7 +70,7 @@ Il flusso previsto è il seguente:
 - **Backend:** Node.js + Express;
 - **Database:** SQLite;
 - **Deploy front-end:** Netlify;
-- **Deploy backend:** Render, se tecnicamente sostenibile;
+- **Deploy backend:** Render (se tecnicamente sostenibile);
 - **Repository:** GitHub.
 
 ## Strumenti di lavoro

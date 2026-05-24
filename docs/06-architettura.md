@@ -15,13 +15,13 @@ MuseoHub adotta un’architettura web client-server.
 
 ## Componenti principali
 
-| Componente      | Tecnologia        | Responsabilità                                                                  |
-| --------------- | ----------------- | ------------------------------------------------------------------------------- |
-| Frontend        | React + Vite      | Interfaccia utente, navigazione, form e visualizzazione dati                    |
-| Backend         | Node.js + Express | API REST, logica applicativa, validazione delle richieste e accesso ai dati     |
-| Database        | SQLite            | Persistenza strutturata di eventi, prenotazioni, feedback e dati amministrativi |
-| Deploy frontend | Netlify           | Pubblicazione dell’interfaccia web                                              |
-| Deploy backend  | Render            | Pubblicazione del servizio API                                                  |
+| Componente      | Tecnologia                           | Responsabilità                                                                  |
+| --------------- | ------------------------------------ | ------------------------------------------------------------------------------- |
+| Frontend        | React + Vite                         | Interfaccia utente, navigazione, form e visualizzazione dati                    |
+| Backend         | Node.js + Express                    | API REST, logica applicativa, validazione delle richieste e accesso ai dati     |
+| Database        | SQLite                               | Persistenza strutturata di eventi, prenotazioni, feedback e dati amministrativi |
+| Deploy frontend | Netlify                              | Pubblicazione dell’interfaccia web                                              |
+| Deploy backend  | Render (se tecnicamente sostenibile) | Pubblicazione del servizio API                                                  |
 
 ## Frontend
 
@@ -54,9 +54,32 @@ Il database conserva in modo strutturato:
 - eventi o servizi culturali;
 - prenotazioni guest;
 - feedback;
-- eventuali dati amministrativi.
+- eventuali dati amministrativi di supporto.
 
-Lo schema fisico definitivo sarà precisato durante l’implementazione del backend, mantenendo coerenza con il modello dati preliminare.
+## Flusso di configurazione e utilizzo del database
+
+```text
+schema.sql
+  definisce la struttura delle tabelle
+
+database.js
+  apre la connessione al file SQLite museohub.sqlite
+
+initDb.js
+  esegue schema.sql nel database
+
+seedDb.js
+  inserisce dati dimostrativi
+
+eventsRoutes.js
+  legge i dati dal database
+
+app.js
+  collega le route agli endpoint API
+
+server.js
+  avvia il backend
+```
 
 ## Comunicazione tra componenti
 
@@ -64,10 +87,10 @@ La comunicazione tra frontend e backend avviene tramite richieste HTTP verso API
 
 Il flusso generale è:
 
-1. il frontend invia una richiesta al back-end;
+1. il frontend invia una richiesta al backend;
 2. il backend valida la richiesta;
 3. il backend legge o modifica i dati nel database;
-4. il backend restituisce una risposta al front-end;
+4. il backend restituisce una risposta al frontend;
 5. il frontend aggiorna l’interfaccia utente.
 
 Diagramma di riferimento:

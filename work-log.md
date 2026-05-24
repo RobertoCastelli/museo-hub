@@ -47,3 +47,9 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Fase:** sviluppo backend API REST.  
 **Attività:** implementazione delle route pubbliche `GET /api/events` e `GET /api/events/:id`, collegamento del router eventi all’applicazione Express, verifica del recupero dati da SQLite e gestione degli errori per identificativi non validi o eventi inesistenti.  
 **Riferimento Git:** commit relativo all’implementazione delle API eventi.
+
+### 008 — 24/05/2026 — Implementazione API prenotazioni
+
+**Fase:** sviluppo backend API REST.  
+**Attività:** implementazione della route `POST /api/bookings`, con validazione dei dati, controllo disponibilità evento, generazione del codice prenotazione, salvataggio su SQLite e aggiornamento dei posti disponibili.  
+**Riferimento Git:** commit relativo all’implementazione delle API prenotazioni.

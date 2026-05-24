@@ -11,10 +11,14 @@ _Descrive in modo indipendente dal linguaggio di programmazione i passaggi logic
 FUNZIONE creaPrenotazione(event_id, visitor_name, visitor_email, participants)
     IF uno dei dati è mancante
         return errore "dati obbligatori mancanti"
-    IF event_id non esiste
-        return errore "evento non trovato"
     IF participants <= 0 OR participants > 4
         return errore "numero partecipanti non valido"
+    IF event_id non è valido
+        return errore "id evento non valido"
+    IF event_id non esiste
+        return errore "evento non trovato"
+    IF evento non è attivo
+        return errore "evento non prenotabile"
     IF available_slots evento < participants
         return errore "disponibilità insufficiente"
 
@@ -24,7 +28,6 @@ FUNZIONE creaPrenotazione(event_id, visitor_name, visitor_email, participants)
 
     return conferma con codice prenotazione
 FINE FUNZIONE
-
 ```
 
 ## Generazione codice prenotazione

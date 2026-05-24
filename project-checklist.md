@@ -36,7 +36,7 @@ _Serve per controllare l’avanzamento delle attività e garantire che progettaz
 - [x] Documentare test funzionali
 - [x] Salvare screenshot principali
 - [ ] Pubblicare frontend su Netlify
-- [ ] Pubblicare backend su Render (se sostenibile)
+- [ ] Pubblicare backend su Render (se tecnicamente sostenibile)
 - [ ] Documentare istruzioni di esecuzione
 
 ## Report finale

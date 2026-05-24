@@ -4,16 +4,18 @@ const cors = require("cors");
 
 // Import route modules
 const eventsRoutes = require("./routes/eventsRoutes");
+const bookingsRoutes = require("./routes/bookingsRoutes");
 
 // Create the Express application istance
 const app = express();
 
-// Global Middleware configuration
+// Global Middleware configuration to handle CORS and JSON request parsing
 app.use(cors());
 app.use(express.json());
 
 // Events API routes
 app.use("/api/events", eventsRoutes);
+app.use("/api/bookings", bookingsRoutes);
 
 // Health check endpoint
 app.get("/api/health", (req, res) => {
