@@ -59,3 +59,9 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Fase:** sviluppo backend API REST.  
 **Attività:** implementazione della route `POST /api/feedback`, con validazione dei dati, verifica della prenotazione tramite booking code e salvataggio del feedback su database SQLite.  
 **Riferimento Git:** commit relativo all’implementazione delle API feedback.
+
+### 010 — 25/05/2026 — Integrazione frontend catalogo eventi
+
+**Fase:** integrazione frontend-backend.  
+**Attività:** implementazione del recupero eventi tramite fetch API nel frontend React, creazione del service `eventsService.js`, gestione dello stato applicativo con `useState` e `useEffect`, visualizzazione dinamica del catalogo eventi e prima componentizzazione tramite `EventCard`.  
+**Riferimento Git:** commit relativi all’integrazione frontend del catalogo eventi.
