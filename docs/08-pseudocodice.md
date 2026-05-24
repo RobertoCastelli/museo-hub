@@ -57,6 +57,7 @@ FUNZIONE registraFeedback(booking_code, rating, comment)
         return errore "codice prenotazione non valido"
 
     recupera event_id dalla prenotazione
+
     salvaFeedback(event_id, booking_code, rating, comment)
 
     return conferma registrazione feedback

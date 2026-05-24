@@ -72,3 +72,27 @@ _Documenta scenari d’uso, risultati attesi, risultati ottenuti, eventuali erro
 **Risultato atteso:** valore `available_slots` diminuito in base al numero di partecipanti prenotati.
 **Esito:** superato.
 **Screenshot:** `docs/screenshots/12-api-booking-updated-slots.png`
+
+## Test API feedback
+
+### POST /api/feedback — invio feedback valido
+
+**Obiettivo:** verificare il salvataggio di un feedback collegato a una prenotazione esistente.
+**Dati inviati:** codice prenotazione, valutazione numerica e commento.
+**Risultato atteso:** registrazione del feedback e risposta `201 Created`.
+**Esito:** superato.
+**Screenshot:** `docs/screenshots/13-api-feedback-success.png`
+
+### POST /api/feedback — rating non valido
+
+**Obiettivo:** verificare la validazione della valutazione numerica.
+**Risultato atteso:** risposta di errore gestita con stato `400`.
+**Esito:** superato.
+**Screenshot:** `docs/screenshots/14-api-feedback-invalid-rating.png`
+
+### POST /api/feedback — codice prenotazione inesistente
+
+**Obiettivo:** verificare la gestione di un feedback riferito a una prenotazione non presente nel database.
+**Risultato atteso:** risposta di errore gestita con stato `404`.
+**Esito:** superato.
+**Screenshot:** `docs/screenshots/15-api-feedback-booking-not-found.png`

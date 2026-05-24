@@ -53,3 +53,9 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Fase:** sviluppo backend API REST.  
 **Attività:** implementazione della route `POST /api/bookings`, con validazione dei dati, controllo disponibilità evento, generazione del codice prenotazione, salvataggio su SQLite e aggiornamento dei posti disponibili.  
 **Riferimento Git:** commit relativo all’implementazione delle API prenotazioni.
+
+### 009 — 24/05/2026 — Implementazione API feedback
+
+**Fase:** sviluppo backend API REST.  
+**Attività:** implementazione della route `POST /api/feedback`, con validazione dei dati, verifica della prenotazione tramite booking code e salvataggio del feedback su database SQLite.  
+**Riferimento Git:** commit relativo all’implementazione delle API feedback.

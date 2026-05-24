@@ -1,11 +1,10 @@
-### Create booking
+### Create feedback for a booking
 
-POST http://localhost:3001/api/bookings
+POST http://localhost:3001/api/feedback
 Content-Type: application/json
 
 {
-  "event_id": 1,
-  "visitor_name": "Mario Rossi",
-  "visitor_email": "mario.rossi@example.com",
-  "participants": 1
+  "booking_code": "123456789",
+  "rating": 5,
+  "comment": "Esperienza positiva"
 }
