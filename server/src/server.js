@@ -1,8 +1,8 @@
-// Variables and modules for server setup
+// Load environment variables and configured Express app
 require("dotenv").config();
 const app = require("./app");
 
-// Start the server
+// Start the API server
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {

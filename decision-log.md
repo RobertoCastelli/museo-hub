@@ -11,3 +11,6 @@ _Questo documento registra le principali decisioni progettuali prese durante lo 
 - D005 - **Editor:** Visual Studio Code e Vim
 - D006 - **Tipo prenotazione:** guest / no registrazione / massimo 4 partecipanti per prenotazione
 - D007 - **Tipo eventi:** gratuiti / no pagamenti
+- D008 - **Homepage:** coincidente con catalogo eventi / no landpage
+- D009 - **Palette grafica:** ispirata a pergamena e salvia
+- D010 - **Layout applicativo:** header, navbar e footer persistenti

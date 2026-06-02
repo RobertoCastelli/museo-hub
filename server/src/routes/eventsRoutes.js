@@ -20,8 +20,7 @@ router.get("/", async (req, res) => {
     res.status(500).json({ error: "Fetch events failed" });
   }
 });
-
-// Retrieve a single event by ID for detailed view
+// Retrieve a single event by ID
 router.get("/:id", async (req, res) => {
   try {
     const db = await openDb();
@@ -50,5 +49,4 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// Export the router
 module.exports = router;

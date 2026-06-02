@@ -3,14 +3,14 @@ const openDb = require("../db/database");
 
 const router = express.Router();
 
-// Generate a unique booking code
+// Generate a readable booking code using event ID, current date and random suffix
 function generateBookingCode(eventId) {
   const timestamp = new Date().toISOString().slice(0, 10).replace(/-/g, ""); // Get current date in YYYYMMDD format
-  const randomNum = Math.floor(Math.random() * 9000); // Generate a random 4-digit number
+  const randomNum = Math.floor(1000 + Math.random() * 9000); // Generate a random 4-digit number
   return `MH-E${eventId}-${timestamp}-${randomNum}`; // e.g., MH-E1-20240610-1234
 }
 
-// Create a guest booking for an event
+// Create a guest booking, validate availability and update remaining slots
 router.post("/", async (req, res) => {
   try {
     const { event_id, visitor_name, visitor_email, participants } = req.body;

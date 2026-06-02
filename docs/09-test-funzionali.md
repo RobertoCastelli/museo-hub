@@ -1,7 +1,7 @@
 # Test funzionali
 
 _Questo documento raccoglie i test funzionali previsti ed eseguiti sul prototipo MuseoHub._
-_Documenta scenari d’uso, risultati attesi, risultati ottenuti, eventuali errori riscontrati e screenshot utili alla validazione del sistema._
+_Documenta scenari d’uso, risultati attesi, esito e screenshot utili alla validazione del sistema._
 
 ---
 
@@ -96,3 +96,12 @@ _Documenta scenari d’uso, risultati attesi, risultati ottenuti, eventuali erro
 **Risultato atteso:** risposta di errore gestita con stato `404`.
 **Esito:** superato.
 **Screenshot:** `docs/screenshots/15-api-feedback-booking-not-found.png`
+
+## Test integrazione frontend-backend
+
+### Visualizzazione catalogo eventi
+
+**Obiettivo:** verificare il recupero e la visualizzazione degli eventi nel frontend React tramite API REST.
+**Risultato atteso:** caricamento dinamico del catalogo eventi dal backend Express con dati provenienti dal database SQLite.
+**Esito:** superato.
+**Screenshot:** `docs/screenshots/16-frontend-events-list.png`

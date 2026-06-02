@@ -65,3 +65,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Fase:** integrazione frontend-backend.  
 **Attività:** implementazione del recupero eventi tramite fetch API nel frontend React, creazione del service `eventsService.js`, gestione dello stato applicativo con `useState` e `useEffect`, visualizzazione dinamica del catalogo eventi e prima componentizzazione tramite `EventCard`.  
 **Riferimento Git:** commit relativi all’integrazione frontend del catalogo eventi.
+
+### 011 — Frontend dettaglio evento e layout applicativo
+
+**Fase:** sviluppo frontend React.
+
+**Attività:** Implementato il layout base dell'applicazione composto da header, barra di navigazione, area contenuti e footer. Definita la palette grafica iniziale del progetto e introdotta la pagina di dettaglio evento tramite routing dinamico React Router e integrazione con l'endpoint GET /api/events/:id.
+
+**Riferimento Git:** commit relativo all'integrazione del dettaglio evento e del layout applicativo.
