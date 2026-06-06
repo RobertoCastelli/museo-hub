@@ -1,0 +1,22 @@
+/* EVENTS */
+.events-title {
+  margin: 1rem 0 0;
+  font-family: "Jetbrains Mono", monospace;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.events-list {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.events-subtitle {
+  max-width: 640px;
+  font-size: small;
+  font-style: italic;
+  color: var(--color-text);
+  opacity: 0.7;
+}

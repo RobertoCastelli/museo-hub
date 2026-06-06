@@ -14,3 +14,7 @@ _Questo documento registra le principali decisioni progettuali prese durante lo 
 - D008 - **Homepage:** coincidente con catalogo eventi / no landpage
 - D009 - **Palette grafica:** ispirata a pergamena e salvia
 - D010 - **Layout applicativo:** header, navbar e footer persistenti
+- D011 - **Prenotazione:** integrata direttamente nella pagina dettaglio evento
+- D012 - **Lingua interfaccia:** inglese / documentazione in italiano
+- D013 - **Navigazione eventi:** card interamente cliccabile
+- D014 - **Monitoraggio applicativo:** health check visuale backend e database nel footer

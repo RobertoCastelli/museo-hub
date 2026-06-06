@@ -66,10 +66,26 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** implementazione del recupero eventi tramite fetch API nel frontend React, creazione del service `eventsService.js`, gestione dello stato applicativo con `useState` e `useEffect`, visualizzazione dinamica del catalogo eventi e prima componentizzazione tramite `EventCard`.  
 **Riferimento Git:** commit relativi all’integrazione frontend del catalogo eventi.
 
-### 011 — Frontend dettaglio evento e layout applicativo
+### 011 — 01-02/06/2026 — Integrazione frontend dettaglio evento e layout applicativo
 
 **Fase:** sviluppo frontend React.
 
 **Attività:** Implementato il layout base dell'applicazione composto da header, barra di navigazione, area contenuti e footer. Definita la palette grafica iniziale del progetto e introdotta la pagina di dettaglio evento tramite routing dinamico React Router e integrazione con l'endpoint GET /api/events/:id.
 
 **Riferimento Git:** commit relativo all'integrazione del dettaglio evento e del layout applicativo.
+
+### 012 — 03-04/06/2026 — Integrazione frontend prenotazioni
+
+**Fase:** integrazione frontend-backend.
+
+**Attività:** realizzazione della pagina di prenotazione, collegamento del form all’API `POST /api/bookings`, salvataggio delle prenotazioni nel database SQLite e visualizzazione della conferma con codice prenotazione.
+
+**Riferimento Git:** commit relativo all’integrazione frontend del workflow di prenotazione.
+
+### 013 — 05-06/06/2026 — Consolidamento interfaccia pubblica
+
+**Fase:** rifinitura frontend React.
+
+**Attività:** riorganizzazione degli stili mediante accorpamento dei fogli CSS condivisi, revisione della navigazione principale, aggiornamento dell'identità grafica del prototipo, miglioramento del catalogo eventi e delle EventCard, integrazione di icone informative e realizzazione di un semplice sistema di health check visuale per il monitoraggio dello stato del backend e del database.
+
+**Riferimento Git:** commit relativo al consolidamento dell'interfaccia pubblica, alla riorganizzazione degli stili e al monitoraggio dello stato applicativo.

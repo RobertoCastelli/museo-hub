@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import EventsPage from "./pages/EventsPage/EventsPage";
-import EventDetailPage from "./pages/EventDetailPage/EventDetailPage";
-import FeedbackPage from "./pages/FeedbackPage/FeedbackPage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import EventsPage from "./pages/EventsPage";
+import EventDetailPage from "./pages/EventDetailPage";
+import FeedbackPage from "./pages/FeedbackPage";
+import DashboardPage from "./pages/DashboardPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<EventsPage />} />
             <Route path="/events/:id" element={<EventDetailPage />} />
             <Route path="/feedback" element={<FeedbackPage />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
           </Routes>
         </main>
 

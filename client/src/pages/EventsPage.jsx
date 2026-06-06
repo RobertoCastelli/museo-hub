@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { getEvents } from "../../services/eventsService";
-import EventCard from "../../components/EventCard/EventCard";
+import { getEvents } from "../services/eventsService";
+import EventCard from "../components/EventCard";
+import "../styles/pages.css";
 
 function EventsPage() {
   const [events, setEvents] = useState([]);
@@ -28,12 +29,15 @@ function EventsPage() {
       {!loading && !error && events.length === 0 && <p>No events available.</p>}
       {!loading && !error && events.length > 0 && (
         <section>
-          <h2>Events</h2>
-          <ol>
+          <h1 className="events-title">cultural events</h1>
+          <p className="events-subtitle">
+            explore current cultural activities available for booking.
+          </p>
+          <div className="events-list">
             {events.map((event) => (
               <EventCard key={event.id} event={event} />
             ))}
-          </ol>
+          </div>
         </section>
       )}
     </>

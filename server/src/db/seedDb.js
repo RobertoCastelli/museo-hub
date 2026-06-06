@@ -16,7 +16,7 @@ async function seedDb() {
         INSERT INTO events (title, description, date, max_capacity, available_slots, status) VALUES (?, ?, ?, ?, ?, ?)`,
     [
       "Mostra d'Arte Contemporanea",
-      "Una mostra che presenta opere di artisti contemporanei di fama internazionale.",
+      "una mostra che presenta opere di artisti contemporanei di fama internazionale.",
       "2026-07-15",
       100,
       100,
@@ -28,7 +28,7 @@ async function seedDb() {
         INSERT INTO events (title, description, date, max_capacity, available_slots, status) VALUES (?, ?, ?, ?, ?, ?)`,
     [
       "Mostra di Fotografia",
-      "Una mostra che presenta una selezione di fotografie di artisti emergenti.",
+      "una mostra che presenta una selezione di fotografie di artisti emergenti.",
       "2026-08-01",
       50,
       50,
@@ -40,7 +40,7 @@ async function seedDb() {
         INSERT INTO events (title, description, date, max_capacity, available_slots, status) VALUES (?, ?, ?, ?, ?, ?)`,
     [
       "Mostra di Scultura",
-      "Una mostra che presenta una selezione di sculture di artisti contemporanei.",
+      "una mostra che presenta una selezione di sculture di artisti contemporanei.",
       "2026-09-10",
       30,
       30,

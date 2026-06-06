@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
 
     const ratingValue = Number(rating);
 
-    if (isNaN(rating) || rating < 1 || rating > 5) {
+    if (isNaN(ratingValue) || ratingValue < 1 || ratingValue > 5) {
       return res.status(400).json({ error: "Invalid rating (1-5)" });
     }
 

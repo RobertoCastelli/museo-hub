@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
     const db = await openDb();
 
     const events = await db.all(`
-      SELECT id, title, description, date, max_capacity, available_slots 
+    SELECT id, title, description, date, max_capacity, available_slots, status
       FROM events 
       WHERE status = 'active' 
       ORDER BY date ASC
@@ -20,6 +20,7 @@ router.get("/", async (req, res) => {
     res.status(500).json({ error: "Fetch events failed" });
   }
 });
+
 // Retrieve a single event by ID
 router.get("/:id", async (req, res) => {
   try {
@@ -32,7 +33,7 @@ router.get("/:id", async (req, res) => {
 
     const event = await db.get(
       `
-      SELECT id, title, description, date, max_capacity, available_slots 
+      SELECT id, title, description, date, max_capacity, available_slots, status
       FROM events 
       WHERE id = ? 
       `,
