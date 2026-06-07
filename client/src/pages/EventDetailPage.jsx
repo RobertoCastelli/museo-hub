@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getEventById } from "../services/eventsService";
 import BookingForm from "../components/BookingForm";
-import { GoPeople } from "react-icons/go";
+import { GoCalendar, GoPeople } from "react-icons/go";
 
 function EventDetailPage() {
   const { id } = useParams(); // Get the event ID from the URL parameters
@@ -27,29 +27,52 @@ function EventDetailPage() {
       });
   }, [id]);
 
+  // Refresh available_slots
+  const handleBookingSuccess = (participants) => {
+    setEvent((prevEvent) => {
+      if (!prevEvent) return prevEvent;
+
+      return {
+        ...prevEvent,
+        available_slots: prevEvent.available_slots - participants,
+      };
+    });
+  };
+
   return (
     <>
-      {error && <p>Error: {error.message}</p>}
-      {loading && <p>Loading event...</p>}
-      <section>
-        <h2>Event Details</h2>
-        <img
-          src="https://placehold.co/500x200?text=detail+event"
-          alt="detail image"
-        />
-        <h3>{event?.title}</h3>
-        <p>{event?.description}</p>
-        <div>Date: {event?.date}</div>
-        <div>max capacity: {event?.max_capacity}</div>
-        <div>
-          <GoPeople />
-          available slots: {event?.available_slots}
-        </div>
-        <div>status: {event?.status}</div>
-      </section>
+      {error && <p>error: {error.message}</p>}
+      {loading && <p>loading event...</p>}
+      <section className="detail-page">
+        <div className="detail-page-content">
+          <Link className="detail-page-back-link" to="/">
+            ← back to events
+          </Link>
+          <img
+            className="detail-page-image"
+            src="https://placehold.co/500x200?text=detail+event"
+            alt="detail event"
+          />
 
-      <section>
-        <BookingForm eventId={id} />
+          <h1>{event?.title}</h1>
+          <p className="detail-page-description">{event?.description}</p>
+          <p className="detail-page-date">
+            <GoCalendar />
+            date · {event?.date}
+          </p>
+          <p className="detail-page-slots">
+            <GoPeople />
+            available slots · {event?.available_slots}/{event?.max_capacity}
+          </p>
+        </div>
+
+        <aside className="detail-page-booking">
+          <BookingForm
+            eventId={id}
+            eventTitle={event?.title}
+            onBookingSuccess={handleBookingSuccess}
+          />
+        </aside>
       </section>
     </>
   );

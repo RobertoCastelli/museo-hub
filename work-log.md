@@ -89,3 +89,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** riorganizzazione degli stili mediante accorpamento dei fogli CSS condivisi, revisione della navigazione principale, aggiornamento dell'identità grafica del prototipo, miglioramento del catalogo eventi e delle EventCard, integrazione di icone informative e realizzazione di un semplice sistema di health check visuale per il monitoraggio dello stato del backend e del database.
 
 **Riferimento Git:** commit relativo al consolidamento dell'interfaccia pubblica, alla riorganizzazione degli stili e al monitoraggio dello stato applicativo.
+
+### 014 — 06-07/06/2026 — Consolidamento dettaglio evento e prenotazione
+
+**Fase:** rifinitura frontend React.
+
+**Attività:** revisione della pagina dettaglio evento con layout a due colonne, integrazione grafica del form di prenotazione, sostituzione del campo partecipanti con selezione guidata da 1 a 4, realizzazione della modal di conferma prenotazione, visualizzazione del codice prenotazione e aggiornamento immediato dei posti disponibili dopo una prenotazione riuscita.
+
+**Riferimento Git:** commit relativo al consolidamento del workflow frontend di prenotazione.

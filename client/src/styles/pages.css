@@ -14,9 +14,56 @@
 }
 
 .events-subtitle {
-  max-width: 640px;
   font-size: small;
   font-style: italic;
   color: var(--color-text);
   opacity: 0.7;
+}
+
+/* DETAIL PAGE */
+.detail-page {
+  display: grid;
+  grid-template-columns: 1fr 20rem;
+  align-items: start;
+  gap: 1rem;
+}
+
+.detail-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-page-back-link {
+  font-family: "JetBrains Mono", monospace;
+  font-size: small;
+  color: var(--color-accent);
+  margin-top: 1rem;
+}
+
+.detail-page-image {
+  width: 100%;
+  height: 15rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.3rem;
+  object-fit: cover;
+}
+
+.detail-page-date,
+.detail-page-slots,
+.detail-page-status {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: small;
+  opacity: 0.7;
+}
+
+.detail-page-booking {
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.3rem;
+  background-color: var(--color-surface);
+  margin-top: 3rem;
 }

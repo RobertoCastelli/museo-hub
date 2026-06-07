@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { getHealthStatus } from "../services/healthService";
-import { GoDatabase } from "react-icons/go";
-import { TbApi } from "react-icons/tb";
 import "../styles/components.css";
 
 function Footer() {
@@ -33,27 +31,25 @@ function Footer() {
 
       <p>MuseoHub &copy; {new Date().getFullYear()} robertocastelli.dev</p>
 
-      <div className="system-status">
+      <div className="status">
         <span className="status-item">
-          <TbApi />
           <span
             className={`status-dot ${
               health.api === "connected" ? "connected" : "disconnected"
             }`}
           />
-          Backend
+          backend
         </span>
 
         <span className="status-separator">|</span>
 
         <span className="status-item">
-          <GoDatabase />
           <span
             className={`status-dot ${
               health.database === "connected" ? "connected" : "disconnected"
             }`}
           />
-          Database
+          database
         </span>
       </div>
     </footer>

@@ -18,3 +18,4 @@ _Questo documento registra le principali decisioni progettuali prese durante lo 
 - D012 - **Lingua interfaccia:** inglese / documentazione in italiano
 - D013 - **Navigazione eventi:** card interamente cliccabile
 - D014 - **Monitoraggio applicativo:** health check visuale backend e database nel footer
+- D015 - **Conferma prenotazione:** visualizzazione del codice prenotazione tramite modal dedicata
