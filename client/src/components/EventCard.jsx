@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { GoCalendar, GoPeople } from "react-icons/go";
+import { formatDate } from "../Utils/formatDate";
 import "../styles/components.css";
 
 function EventCard({ event }) {
@@ -14,7 +15,7 @@ function EventCard({ event }) {
       <div className="event-card-content">
         <p className="event-card-date">
           <GoCalendar className="icon" />
-          {event.date}
+          {formatDate(event.date)}
         </p>
 
         <h3>{event.title}</h3>

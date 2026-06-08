@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { getEvents } from "../services/eventsService";
 import EventCard from "../components/EventCard";
 import "../styles/pages.css";

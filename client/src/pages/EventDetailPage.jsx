@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getEventById } from "../services/eventsService";
 import BookingForm from "../components/BookingForm";
 import { GoCalendar, GoPeople } from "react-icons/go";
+import { formatDate } from "../Utils/formatDate";
 
 function EventDetailPage() {
   const { id } = useParams(); // Get the event ID from the URL parameters
@@ -45,7 +46,7 @@ function EventDetailPage() {
       {loading && <p>loading event...</p>}
       <section className="detail-page">
         <div className="detail-page-content">
-          <Link className="detail-page-back-link" to="/">
+          <Link className="btn-detail-page-back-link" to="/">
             ← back to events
           </Link>
           <img
@@ -58,7 +59,7 @@ function EventDetailPage() {
           <p className="detail-page-description">{event?.description}</p>
           <p className="detail-page-date">
             <GoCalendar />
-            date · {event?.date}
+            date · {formatDate(event?.date)}
           </p>
           <p className="detail-page-slots">
             <GoPeople />
@@ -69,6 +70,7 @@ function EventDetailPage() {
         <aside className="detail-page-booking">
           <BookingForm
             eventId={id}
+            eventDate={event?.date}
             eventTitle={event?.title}
             onBookingSuccess={handleBookingSuccess}
           />

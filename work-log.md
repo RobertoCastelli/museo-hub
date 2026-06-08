@@ -97,3 +97,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** revisione della pagina dettaglio evento con layout a due colonne, integrazione grafica del form di prenotazione, sostituzione del campo partecipanti con selezione guidata da 1 a 4, realizzazione della modal di conferma prenotazione, visualizzazione del codice prenotazione e aggiornamento immediato dei posti disponibili dopo una prenotazione riuscita.
 
 **Riferimento Git:** commit relativo al consolidamento del workflow frontend di prenotazione.
+
+### 015 — 08/06/2026 — Implementazione dashboard
+
+**Fase:** integrazione frontend-backend.
+
+**Attività:** implementazione della route `GET /api/dashboard`, realizzazione delle query aggregate su database SQLite per il recupero degli indicatori principali del sistema, integrazione del service frontend dedicato e sviluppo della Dashboard pubblica con visualizzazione del numero totale di eventi, prenotazioni, feedback e rating medio.
+
+**Riferimento Git:** commit relativo all'implementazione della dashboard pubblica e delle statistiche aggregate.

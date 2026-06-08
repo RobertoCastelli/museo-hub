@@ -31,21 +31,21 @@ function Footer() {
 
       <p>MuseoHub &copy; {new Date().getFullYear()} robertocastelli.dev</p>
 
-      <div className="status">
-        <span className="status-item">
+      <div className="footer-status">
+        <span className="footer-status-item">
           <span
-            className={`status-dot ${
+            className={`footer-status-dot ${
               health.api === "connected" ? "connected" : "disconnected"
             }`}
           />
           backend
         </span>
 
-        <span className="status-separator">|</span>
+        <span className="footer-status-separator">|</span>
 
-        <span className="status-item">
+        <span className="footer-status-item">
           <span
-            className={`status-dot ${
+            className={`footer-status-dot ${
               health.database === "connected" ? "connected" : "disconnected"
             }`}
           />

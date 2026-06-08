@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { createBooking } from "../services/bookingsService";
+import { formatDate } from "../Utils/formatDate";
 import "../styles/components.css";
 
-function BookingForm({ eventId, eventTitle, onBookingSuccess }) {
+function BookingForm({ eventId, eventDate, eventTitle, onBookingSuccess }) {
   const [bookingResult, setBookingResult] = useState(null);
   const [bookingDetails, setBookingDetails] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
@@ -85,11 +87,15 @@ function BookingForm({ eventId, eventTitle, onBookingSuccess }) {
             <IoCheckmarkCircleOutline className="booking-success-icon" />
 
             <h2>booking confirmed successfully</h2>
-
-            <p className="booking-modal-text">
-              your booking has been saved. keep this code as reference for the
-              event.
-            </p>
+            <div className="booking-modal-text">
+              <p>keep this code as reference for the event.</p>
+              <br />
+              <p>remember to leave a feedback after your visit.</p>
+              <Link className="btn-booking-modal-feedback" to="/feedback">
+                {" "}
+                leave feedback →
+              </Link>
+            </div>
 
             <div className="booking-code-box">
               <span>booking code</span>
@@ -98,13 +104,17 @@ function BookingForm({ eventId, eventTitle, onBookingSuccess }) {
 
             <div className="booking-summary">
               <p>
-                <strong>event:</strong> {eventTitle}
+                <strong>event ·</strong> {eventTitle}
               </p>
               <p>
-                <strong>participants:</strong> {bookingDetails.participants}
+                <strong>date ·</strong>
+                {formatDate(eventDate)}
               </p>
               <p>
-                <strong>email:</strong> {bookingDetails.email}
+                <strong>email ·</strong> {bookingDetails.email}
+              </p>
+              <p>
+                <strong>participants ·</strong> {bookingDetails.participants}
               </p>
             </div>
             <div className="booking-modal-actions">

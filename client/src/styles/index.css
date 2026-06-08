@@ -15,10 +15,6 @@
   --color-info: #2980b9;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
