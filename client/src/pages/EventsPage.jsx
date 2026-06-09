@@ -23,24 +23,29 @@ function EventsPage() {
   }, []);
 
   return (
-    <>
-      {error && <p>Error: {error.message}</p>}
-      {loading && <p>Loading events...</p>}
-      {!loading && !error && events.length === 0 && <p>No events available.</p>}
-      {!loading && !error && events.length > 0 && (
-        <section>
-          <h1 className="events-title">cultural events</h1>
-          <p className="events-subtitle">
-            explore current cultural activities available for booking.
-          </p>
+    <main className="events-container">
+      <section className="events-header">
+        <h1 className="events-title">events</h1>
+        <p className="events-subtitle">
+          explore current cultural activities available for booking.
+        </p>
+      </section>
+
+      <section className="events-content">
+        {error && <p className="events-message">Error: {error.message}</p>}
+        {loading && <p className="events-message">Loading events...</p>}
+        {!loading && !error && events.length === 0 && (
+          <p className="events-message">No events available.</p>
+        )}
+        {!loading && !error && events.length > 0 && (
           <div className="events-list">
             {events.map((event) => (
               <EventCard key={event.id} event={event} />
             ))}
           </div>
-        </section>
-      )}
-    </>
+        )}
+      </section>
+    </main>
   );
 }
 

@@ -58,25 +58,25 @@ function FeedbackPage() {
   };
 
   return (
-    <section className="feedback-container">
-      <div className="feedback-content">
-        <div className="feedback-header">
-          <h1>share your experience</h1>
-          <p>
-            use your booking code to leave feedback after attending a MuseoHub
-            event.
-          </p>
-        </div>
+    <main className="feedback-container">
+      <section className="feedback-header">
+        <h1 className="feedback-title">feedback</h1>
+        <p className="feedback-subtitle">
+          use your booking code to leave feedback after attending a MuseoHub
+          event.
+        </p>
+      </section>
 
+      <section className="feedback-content">
         {feedbackResult && (
-          <div className="feedback-message-success">
+          <div className="feedback-message">
             <h2>feedback submitted successfully</h2>
             <p>thank you for sharing your experience.</p>
           </div>
         )}
 
         {errorMessage && (
-          <div className="feedback-message-error">
+          <div className="feedback-message">
             <p>{errorMessage}</p>
           </div>
         )}
@@ -97,6 +97,7 @@ function FeedbackPage() {
 
           <div className="feedback-form-group">
             <label htmlFor="rating">rating</label>
+
             <div className="feedback-stars">
               {[1, 2, 3, 4, 5].map((star) => (
                 <FaStar
@@ -121,6 +122,7 @@ function FeedbackPage() {
 
           <div className="feedback-form-group">
             <label htmlFor="comment">comment</label>
+
             <textarea
               id="comment"
               name="comment"
@@ -134,8 +136,8 @@ function FeedbackPage() {
             submit feedback
           </button>
         </form>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }
 

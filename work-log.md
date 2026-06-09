@@ -105,3 +105,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** implementazione della route `GET /api/dashboard`, realizzazione delle query aggregate su database SQLite per il recupero degli indicatori principali del sistema, integrazione del service frontend dedicato e sviluppo della Dashboard pubblica con visualizzazione del numero totale di eventi, prenotazioni, feedback e rating medio.
 
 **Riferimento Git:** commit relativo all'implementazione della dashboard pubblica e delle statistiche aggregate.
+
+### 016 — 09/06/2026 — Refactoring struttura frontend e uniformazione stili
+
+**Fase:** consolidamento frontend React.
+
+**Attività:** revisione della struttura JSX e delle convenzioni di naming dei componenti e delle pagine, uniformazione delle classi CSS, riorganizzazione dei componenti condivisi e consolidamento dell'identità grafica del prototipo per migliorare coerenza, leggibilità e manutenibilità del codice.
+
+**Riferimento Git:** commit relativo al refactoring strutturale del frontend e all'uniformazione degli stili.

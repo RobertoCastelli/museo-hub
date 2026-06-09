@@ -75,24 +75,28 @@ function BookingForm({ eventId, eventDate, eventTitle, onBookingSuccess }) {
   };
 
   return (
-    <section className="booking-form-card">
+    <section className="booking-form-container">
       <div className="booking-form-header">
-        <h2>book your visit</h2>
-        <p>complete the form to reserve your place for this event.</p>
+        <h2 className="booking-form-title">book your visit</h2>
+        <p className="booking-form-subtitle">
+          complete the form to reserve your place for this event.
+        </p>
       </div>
 
       {bookingResult && bookingDetails && (
-        <div className="booking-modal-backdrop">
+        <div className="booking-modal-container">
           <div className="booking-modal-content">
-            <IoCheckmarkCircleOutline className="booking-success-icon" />
+            <IoCheckmarkCircleOutline className="booking-modal-icon" />
 
-            <h2>booking confirmed successfully</h2>
+            <h2 className="booking-modal-title">
+              booking confirmed successfully
+            </h2>
+
             <div className="booking-modal-text">
               <p>keep this code as reference for the event.</p>
-              <br />
               <p>remember to leave a feedback after your visit.</p>
-              <Link className="btn-booking-modal-feedback" to="/feedback">
-                {" "}
+
+              <Link className="booking-modal-feedback" to="/feedback">
                 leave feedback →
               </Link>
             </div>
@@ -107,8 +111,7 @@ function BookingForm({ eventId, eventDate, eventTitle, onBookingSuccess }) {
                 <strong>event ·</strong> {eventTitle}
               </p>
               <p>
-                <strong>date ·</strong>
-                {formatDate(eventDate)}
+                <strong>date ·</strong> {formatDate(eventDate)}
               </p>
               <p>
                 <strong>email ·</strong> {bookingDetails.email}
@@ -117,14 +120,11 @@ function BookingForm({ eventId, eventDate, eventTitle, onBookingSuccess }) {
                 <strong>participants ·</strong> {bookingDetails.participants}
               </p>
             </div>
-            <div className="booking-modal-actions">
-              {/*  <button type="button" className="btn-booking-modal-pdf">
-                download PDF
-              </button> */}
 
+            <div className="booking-modal-actions">
               <button
                 type="button"
-                className="btn-booking-modal-close"
+                className="booking-modal-close"
                 onClick={() => {
                   setBookingResult(null);
                   setBookingDetails(null);
@@ -138,12 +138,12 @@ function BookingForm({ eventId, eventDate, eventTitle, onBookingSuccess }) {
       )}
 
       {errorMessage && (
-        <div className="booking-form-message error">
+        <div className="booking-form-message">
           <p>{errorMessage}</p>
         </div>
       )}
 
-      <form className="booking-form" onSubmit={handleSubmit}>
+      <form className="booking-form-content" onSubmit={handleSubmit}>
         <div className="booking-form-group">
           <label htmlFor="name">name</label>
           <input

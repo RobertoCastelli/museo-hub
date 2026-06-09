@@ -41,42 +41,52 @@ function EventDetailPage() {
   };
 
   return (
-    <>
-      {error && <p>error: {error.message}</p>}
-      {loading && <p>loading event...</p>}
-      <section className="detail-page">
-        <div className="detail-page-content">
-          <Link className="btn-detail-page-back-link" to="/">
-            ← back to events
-          </Link>
-          <img
-            className="detail-page-image"
-            src="https://placehold.co/500x200?text=detail+event"
-            alt="detail event"
-          />
-
-          <h1>{event?.title}</h1>
-          <p className="detail-page-description">{event?.description}</p>
-          <p className="detail-page-date">
-            <GoCalendar />
-            date · {formatDate(event?.date)}
-          </p>
-          <p className="detail-page-slots">
-            <GoPeople />
-            available slots · {event?.available_slots}/{event?.max_capacity}
-          </p>
-        </div>
-
-        <aside className="detail-page-booking">
-          <BookingForm
-            eventId={id}
-            eventDate={event?.date}
-            eventTitle={event?.title}
-            onBookingSuccess={handleBookingSuccess}
-          />
-        </aside>
+    <main className="detail-container">
+      <section className="detail-header">
+        <Link className="detail-back-link" to="/">
+          ← back to events
+        </Link>
       </section>
-    </>
+
+      <section className="detail-content">
+        {error && <p className="detail-message">error: {error.message}</p>}
+        {loading && <p className="detail-message">loading event...</p>}
+
+        {!loading && !error && event && (
+          <div className="detail-layout">
+            <article className="detail-info">
+              <img
+                className="detail-image"
+                src="https://placehold.co/500x200?text=detail+event"
+                alt="detail event"
+              />
+
+              <h1 className="detail-title">{event.title}</h1>
+              <p className="detail-description">{event.description}</p>
+
+              <p className="detail-date">
+                <GoCalendar />
+                date · {formatDate(event.date)}
+              </p>
+
+              <p className="detail-slots">
+                <GoPeople />
+                available slots · {event.available_slots}/{event.max_capacity}
+              </p>
+            </article>
+
+            <aside className="detail-booking">
+              <BookingForm
+                eventId={id}
+                eventDate={event.date}
+                eventTitle={event.title}
+                onBookingSuccess={handleBookingSuccess}
+              />
+            </aside>
+          </div>
+        )}
+      </section>
+    </main>
   );
 }
 

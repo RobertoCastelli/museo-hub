@@ -5,8 +5,8 @@ import "../styles/components.css";
 
 function Header() {
   return (
-    <header>
-      <img className="logo" src={logo} alt="Museum event placeholder" />
+    <header className="header-container">
+      <img className="header-logo" src={logo} alt="museum event placeholder" />
 
       <Navbar />
     </header>

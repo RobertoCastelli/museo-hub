@@ -3,17 +3,17 @@ import "../styles/components.css";
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="navbar-container">
       <NavLink className="navbar-item" to="/">
-        <div>events</div>
+        events
       </NavLink>
 
       <NavLink className="navbar-item" to="/feedback">
-        <div>feedback</div>
+        feedback
       </NavLink>
 
       <NavLink className="navbar-item" to="/dashboard">
-        <div>dashboard</div>
+        dashboard
       </NavLink>
     </nav>
   );
