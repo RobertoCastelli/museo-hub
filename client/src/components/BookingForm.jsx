@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { createBooking } from "../services/bookingsService";
 import { formatDate } from "../Utils/formatDate";
-import "../styles/components.css";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
 function BookingForm({ eventId, eventDate, eventTitle, onBookingSuccess }) {
   const [bookingResult, setBookingResult] = useState(null);

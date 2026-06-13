@@ -3,7 +3,6 @@ const openDb = require("../db/database");
 
 const router = express.Router();
 
-// Submit feedback using an existing booking code
 router.post("/", async (req, res) => {
   try {
     const { booking_code, rating, comment } = req.body;
@@ -29,7 +28,6 @@ router.post("/", async (req, res) => {
 
     const db = await openDb();
 
-    // Retrieve the booking to associate the feedback with the correct event
     const booking = await db.get(
       `
         SELECT event_id, booking_code
@@ -43,7 +41,6 @@ router.post("/", async (req, res) => {
       return res.status(404).json({ error: "Booking not found" });
     }
 
-    // Store feedback linked to both booking code and event
     await db.run(
       `
         INSERT INTO feedback (event_id, booking_code, rating, comment) VALUES (?, ?, ?, ?)

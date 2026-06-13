@@ -4,7 +4,9 @@ import Footer from "./components/Footer";
 import EventsPage from "./pages/EventsPage";
 import EventDetailPage from "./pages/EventDetailPage";
 import FeedbackPage from "./pages/FeedbackPage";
-import DashboardPage from "./pages/DashboardPage";
+import AdminPage from "./pages/AdminPage";
+import "./styles/components.css";
+import "./styles/pages.css";
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
             <Route path="/" element={<EventsPage />} />
             <Route path="/events/:id" element={<EventDetailPage />} />
             <Route path="/feedback" element={<FeedbackPage />} />
-            <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/admin" element={<AdminPage />} />
           </Routes>
         </main>
 

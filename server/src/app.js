@@ -8,6 +8,7 @@ const eventsRoutes = require("./routes/eventsRoutes");
 const bookingsRoutes = require("./routes/bookingsRoutes");
 const feedbackRoutes = require("./routes/feedbackRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
 // Create the Express application instance
 const app = express();
@@ -21,6 +22,7 @@ app.use("/api/events", eventsRoutes);
 app.use("/api/bookings", bookingsRoutes);
 app.use("/api/feedback", feedbackRoutes);
 app.use("/api/dashboard", dashboardRoutes);
+app.use("/api/admin", adminRoutes);
 
 // Health check endpoint to verify API and database availability
 app.get("/api/health", async (req, res) => {

@@ -5,9 +5,10 @@ export async function getDashboard() {
     if (!response.ok) {
       throw new Error("Failed to fetch dashboard stats");
     }
+
     return response.json();
   } catch (error) {
-    console.log("Error fetching dashboard stats:", error);
+    console.error("Error fetching dashboard stats:", error);
     throw error;
   }
 }

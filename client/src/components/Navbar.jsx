@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import "../styles/components.css";
 
 function Navbar() {
   return (
@@ -12,8 +11,8 @@ function Navbar() {
         feedback
       </NavLink>
 
-      <NavLink className="navbar-item" to="/dashboard">
-        dashboard
+      <NavLink className="navbar-item" to="/admin">
+        admin
       </NavLink>
     </nav>
   );

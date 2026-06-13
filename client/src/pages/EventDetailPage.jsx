@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getEventById } from "../services/eventsService";
 import BookingForm from "../components/BookingForm";
-import { GoCalendar, GoPeople } from "react-icons/go";
+import { getEventById } from "../services/eventsService";
 import { formatDate } from "../Utils/formatDate";
+import { GoCalendar, GoPeople } from "react-icons/go";
 
 function EventDetailPage() {
   const { id } = useParams(); // Get the event ID from the URL parameters

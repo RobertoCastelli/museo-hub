@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getDashboard } from "../services/dashboardService";
 
-function DashboardPage() {
+function Dashboard() {
   const [stats, setStats] = useState(null);
 
   useEffect(() => {
@@ -16,23 +16,23 @@ function DashboardPage() {
 
   if (!stats) {
     return (
-      <main className="dashboard-container">
-        <section className="dashboard-header">
+      <section className="dashboard-container">
+        <div className="dashboard-header">
           <p className="dashboard-message">loading dashboard...</p>
-        </section>
-      </main>
+        </div>
+      </section>
     );
   }
 
   return (
-    <main className="dashboard-container">
-      <section className="dashboard-header">
+    <section className="dashboard-container">
+      <div className="dashboard-header">
         <h1 className="dashboard-title">dashboard</h1>
         <p className="dashboard-subtitle">
           a synthetic view of events, bookings and visitor feedback collected by
           MuseoHub.
         </p>
-      </section>
+      </div>
 
       <section className="dashboard-content">
         <div className="dashboard-grid">
@@ -59,8 +59,8 @@ function DashboardPage() {
           </article>
         </div>
       </section>
-    </main>
+    </section>
   );
 }
 
-export default DashboardPage;
+export default Dashboard;

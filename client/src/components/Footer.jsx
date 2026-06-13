@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { getHealthStatus } from "../services/healthService";
-import "../styles/components.css";
 
 function Footer() {
   const [health, setHealth] = useState({

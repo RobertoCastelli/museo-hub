@@ -1,0 +1,76 @@
+export async function getAdminEvents() {
+  try {
+    const response = await fetch("http://localhost:3001/api/admin");
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch admin");
+    }
+
+    return response.json();
+  } catch (error) {
+    console.log("Error fetching admin:", error);
+    throw error;
+  }
+}
+
+export async function createAdminEvent(formEventData) {
+  try {
+    const response = await fetch("http://localhost:3001/api/admin/events", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formEventData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to create event");
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error("Error creating event:", error);
+    throw error;
+  }
+}
+
+export async function updateAdminEvent(id, formEventData) {
+  try {
+    const response = await fetch(
+      `http://localhost:3001/api/admin/events/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formEventData),
+      },
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to edit event");
+    }
+    return response.json();
+  } catch (error) {
+    console.error("Error editing event:", error);
+    throw error;
+  }
+}
+
+export async function deleteAdminEvent(id) {
+  try {
+    const response = await fetch(
+      `http://localhost:3001/api/admin/events/${id}`,
+      {
+        method: "DELETE",
+      },
+    );
+    if (!response.ok) {
+      throw new Error("Failed to delete event");
+    }
+    return response.json();
+  } catch (error) {
+    console.error("Error deleting event:", error);
+    throw error;
+  }
+}

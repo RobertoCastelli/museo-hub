@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { getEvents } from "../services/eventsService";
 import EventCard from "../components/EventCard";
-import "../styles/pages.css";
+import { getEvents } from "../services/eventsService";
 
 function EventsPage() {
   const [events, setEvents] = useState([]);

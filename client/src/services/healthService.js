@@ -5,6 +5,7 @@ export async function getHealthStatus() {
     if (!response.ok) {
       throw new Error("Health check failed");
     }
+
     return response.json();
   } catch (error) {
     console.error("Error fetching health status:", error);

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { GoCalendar, GoPeople } from "react-icons/go";
 import { formatDate } from "../Utils/formatDate";
-import "../styles/components.css";
+import { GoCalendar, GoPeople } from "react-icons/go";
 
 function EventCard({ event }) {
   return (

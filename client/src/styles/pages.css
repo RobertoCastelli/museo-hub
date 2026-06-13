@@ -108,6 +108,7 @@
   padding: 1rem;
   border: 1px solid var(--color-border);
   border-radius: 0.3rem;
+  box-shadow: 0 5px 10px rgba(20, 39, 56, 0.08);
   background-color: var(--color-surface);
 }
 
@@ -137,7 +138,7 @@
 
 .feedback-title {
   margin: 0;
-  font-family: "jetbrains mono", monospace;
+  font-family: "jetbrains Mono", monospace;
   text-transform: uppercase;
   color: var(--color-secondary);
 }
@@ -154,6 +155,7 @@
   padding: 1rem;
   border: 1px solid var(--color-border);
   border-radius: 0.3rem;
+  box-shadow: 0 5px 10px rgba(20, 39, 56, 0.08);
   background-color: var(--color-surface);
 }
 
@@ -236,23 +238,24 @@
   opacity: 1;
 }
 
-/* ===== DASHBOARD PAGE =========================================== */
-.dashboard-container {
+/* ===== ADMIN PAGE ========================================== */
+.admin-container {
   margin-top: 3rem;
 }
 
-.dashboard-header {
+.admin-header {
   margin-bottom: 1rem;
+  margin-top: 3rem;
 }
 
-.dashboard-title {
+.admin-title {
   margin: 0;
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   color: var(--color-secondary);
 }
 
-.dashboard-subtitle {
+.admin-subtitle {
   margin: 0.5rem 0 0;
   font-size: small;
   font-style: italic;
@@ -260,11 +263,16 @@
   opacity: 0.7;
 }
 
-.dashboard-content {
+.admin-content {
   margin-top: 1rem;
 }
 
-.dashboard-message {
+.admin-section-title {
+  margin: 0;
+  font-size: large;
+}
+
+.admin-message {
   margin: 1rem 0 0;
   font-family: "JetBrains Mono", monospace;
   font-size: small;
@@ -272,36 +280,92 @@
   opacity: 0.7;
 }
 
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  text-align: center;
+.admin-add-button,
+.admin-edit-button,
+.admin-delete-button {
+  border-radius: 0.3rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: small;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
-.dashboard-card {
-  padding: 1rem;
+.admin-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin-add-button {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--color-accent);
+  color: var(--color-background);
+  background-color: var(--color-accent);
+}
+
+.admin-edit-button,
+.admin-delete-button {
+  padding: 0.4rem 0.7rem;
+  background-color: transparent;
+}
+
+.admin-edit-button {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.admin-delete-button {
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.admin-add-button:hover,
+.admin-edit-button:hover,
+.admin-delete-button:hover {
+  transform: translateY(-2px);
+}
+
+.admin-table-wrapper {
   border: 1px solid var(--color-border);
   border-radius: 0.3rem;
-  box-shadow: 0 5px 10px rgba(20, 39, 56, 0.08);
-  background: var(--color-surface);
-  border-top: 4px solid var(--color-border);
+  background-color: var(--color-surface);
+  margin-top: 1rem;
+  overflow-x: auto;
 }
 
-.dashboard-value {
-  display: block;
-  font-family: "JetBrains Mono", monospace;
-  font-size: xx-large;
-  font-weight: bold;
-  color: var(--color-primary);
+.admin-table {
+  width: 100%;
+  font-size: small;
+  border-collapse: collapse;
 }
 
-.dashboard-label {
-  display: block;
+.admin-table th,
+.admin-table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.admin-table th {
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.8rem;
   text-transform: uppercase;
-  color: var(--color-muted);
-  letter-spacing: 0.08em;
-  margin-top: 0.75rem;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.admin-table td {
+  color: var(--color-text);
+}
+
+.admin-table tbody tr:hover {
+  border-left: 2px solid var(--color-accent);
+}
+
+.admin-table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-dashboard {
+  margin-top: 3rem;
 }

@@ -3,7 +3,6 @@ const openDb = require("../db/database");
 
 const router = express.Router();
 
-// Retrieve all active events for the public catalog
 router.get("/", async (req, res) => {
   try {
     const db = await openDb();
@@ -21,7 +20,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Retrieve a single event by ID
 router.get("/:id", async (req, res) => {
   try {
     const db = await openDb();

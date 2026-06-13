@@ -1,10 +1,11 @@
-### Create feedback for a booking
-
-POST http://localhost:3001/api/feedback
+PUT http://localhost:3001/api/admin/events/4
 Content-Type: application/json
 
 {
-  "booking_code": "123456789",
-  "rating": 5,
-  "comment": "Esperienza positiva"
+  "title": "Test Updated",
+  "description": "Updated description",
+  "date": "2026-06-20",
+  "max_capacity": 100,
+  "available_slots": 90,
+  "status": "active"
 }

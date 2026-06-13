@@ -113,3 +113,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** revisione della struttura JSX e delle convenzioni di naming dei componenti e delle pagine, uniformazione delle classi CSS, riorganizzazione dei componenti condivisi e consolidamento dell'identità grafica del prototipo per migliorare coerenza, leggibilità e manutenibilità del codice.
 
 **Riferimento Git:** commit relativo al refactoring strutturale del frontend e all'uniformazione degli stili.
+
+### 017 — 10-13/06/2026 — Implementazione CRUD eventi area amministrativa
+
+**Fase:** sviluppo frontend-backend area amministrativa.
+
+**Attività:** implementazione dell’area Admin con visualizzazione tabellare degli eventi, integrazione della dashboard amministrativa, creazione degli endpoint per inserimento, modifica ed eliminazione eventi, collegamento dei service frontend e gestione delle operazioni Add, Edit e Delete tramite modal e aggiornamento della tabella eventi.
+
+**Riferimento Git:** commit relativo all’implementazione del CRUD eventi nell’area amministrativa.
