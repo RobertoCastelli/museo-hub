@@ -1,6 +1,8 @@
+import API_BASE_URL from "../Utils/apiConfig";
+
 export async function createBooking(bookingData) {
   try {
-    const response = await fetch("http://localhost:3001/api/bookings", {
+    const response = await fetch(`${API_BASE_URL}/api/bookings`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

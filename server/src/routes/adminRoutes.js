@@ -72,8 +72,6 @@ router.put("/events/:id", async (req, res) => {
   }
 });
 
-module.exports = router;
-
 router.delete("/events/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -118,3 +116,5 @@ router.get("/bookings", async (req, res) => {
     res.status(500).json({ error: "Fetch bookings failed" });
   }
 });
+
+module.exports = router;

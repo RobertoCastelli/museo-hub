@@ -1,6 +1,8 @@
+import API_BASE_URL from "../Utils/apiConfig";
+
 export async function getHealthStatus() {
   try {
-    const response = await fetch(`http://localhost:3001/api/health`);
+    const response = await fetch(`${API_BASE_URL}/api/health`);
 
     if (!response.ok) {
       throw new Error("Health check failed");

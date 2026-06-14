@@ -1,6 +1,8 @@
+import API_BASE_URL from "../Utils/apiConfig";
+
 export async function getAdminEvents() {
   try {
-    const response = await fetch("http://localhost:3001/api/admin");
+    const response = await fetch(`${API_BASE_URL}/api/admin`);
 
     if (!response.ok) {
       throw new Error("Failed to fetch admin");
@@ -73,7 +75,6 @@ export async function deleteAdminEvent(id) {
     console.error("Error deleting event:", error);
     MediaKeyStatusMap;
     throw error;
-    k;
   }
 }
 
