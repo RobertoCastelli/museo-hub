@@ -1,11 +1,3 @@
-PUT http://localhost:3001/api/admin/events/4
+GET http://localhost:3001/api/admin/bookings
 Content-Type: application/json
 
-{
-  "title": "Test Updated",
-  "description": "Updated description",
-  "date": "2026-06-20",
-  "max_capacity": 100,
-  "available_slots": 90,
-  "status": "active"
-}

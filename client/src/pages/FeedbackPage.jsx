@@ -69,14 +69,14 @@ function FeedbackPage() {
 
       <section className="feedback-content">
         {feedbackResult && (
-          <div className="feedback-message">
+          <div className="feedback-message success">
             <h2>feedback submitted successfully</h2>
             <p>thank you for sharing your experience.</p>
           </div>
         )}
 
         {errorMessage && (
-          <div className="feedback-message">
+          <div className="feedback-message error">
             <p>{errorMessage}</p>
           </div>
         )}

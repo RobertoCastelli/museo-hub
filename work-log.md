@@ -121,3 +121,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** implementazione dell’area Admin con visualizzazione tabellare degli eventi, integrazione della dashboard amministrativa, creazione degli endpoint per inserimento, modifica ed eliminazione eventi, collegamento dei service frontend e gestione delle operazioni Add, Edit e Delete tramite modal e aggiornamento della tabella eventi.
 
 **Riferimento Git:** commit relativo all’implementazione del CRUD eventi nell’area amministrativa.
+
+### 018 — 14/06/2026 — Consolidamento area amministrativa e consultazione prenotazioni
+
+**Fase:** sviluppo frontend-backend area amministrativa.
+
+**Attività:** completamento del CRUD eventi tramite operazioni di creazione, modifica ed eliminazione; refactoring dell'interfaccia amministrativa mediante estrazione dei componenti dedicati alla tabella eventi e alla modal di gestione; integrazione della dashboard amministrativa e realizzazione della consultazione delle prenotazioni tramite endpoint dedicato e visualizzazione tabellare.
+
+**Riferimento Git:** commit relativo al consolidamento dell'area amministrativa e alla consultazione delle prenotazioni.

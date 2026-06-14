@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { getDashboard } from "../services/dashboardService";
+import { GoCalendar, GoCommentDiscussion } from "react-icons/go";
+import { FaStar } from "react-icons/fa";
+import { IoTicketOutline } from "react-icons/io5";
 
 function Dashboard() {
   const [stats, setStats] = useState(null);
@@ -37,21 +40,25 @@ function Dashboard() {
       <section className="dashboard-content">
         <div className="dashboard-grid">
           <article className="dashboard-card">
+            <GoCalendar className="dashboard-icon" />
             <span className="dashboard-value">{stats.totalEvents}</span>
             <span className="dashboard-label">total events</span>
           </article>
 
           <article className="dashboard-card">
+            <IoTicketOutline className="dashboard-icon" />
             <span className="dashboard-value">{stats.totalBookings}</span>
             <span className="dashboard-label">total bookings</span>
           </article>
 
           <article className="dashboard-card">
+            <GoCommentDiscussion className="dashboard-icon" />
             <span className="dashboard-value">{stats.totalFeedback}</span>
             <span className="dashboard-label">total feedback</span>
           </article>
 
           <article className="dashboard-card">
+            <FaStar className="dashboard-icon" />
             <span className="dashboard-value">
               {Number(stats.averageRating).toFixed(1)}
             </span>

@@ -10,7 +10,6 @@ router.get("/", async (req, res) => {
     const events = await db.all(`
       SELECT id, title, description, date, max_capacity, available_slots, status
       FROM events 
-   
       ORDER BY date ASC
       `);
 
@@ -29,12 +28,12 @@ router.post("/events", async (req, res) => {
     await db.run(
       `
       INSERT INTO events (
-      title,
-      description,
-      date,
-      max_capacity,
-      available_slots,
-      status)
+        title,
+        description,
+        date,
+        max_capacity,
+        available_slots,
+        status)
       VALUES (?, ?, ?, ?, ?, ?) `,
       [title, description, date, max_capacity, available_slots, status],
     );
@@ -92,5 +91,30 @@ router.delete("/events/:id", async (req, res) => {
     res.status(200).json({ message: "event deleted successfully" });
   } catch (error) {
     res.status(500).json({ error: "event deletion failed" });
+  }
+});
+
+router.get("/bookings", async (req, res) => {
+  try {
+    const db = await openDb();
+
+    const bookings = await db.all(`
+      SELECT
+        bookings.id,
+        bookings.booking_code,
+        events.title AS event_title,
+        bookings.visitor_name,
+        bookings.visitor_email,
+        bookings.participants,
+        bookings.created_at
+      FROM bookings
+      JOIN events
+        ON bookings.event_id = events.id
+      ORDER BY bookings.id ASC
+    `);
+
+    res.status(200).json(bookings);
+  } catch (error) {
+    res.status(500).json({ error: "Fetch bookings failed" });
   }
 });

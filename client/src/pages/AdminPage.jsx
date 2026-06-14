@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
+import AdminEventsTable from "../components/AdminEventsTable";
+import AdminBookingsTable from "../components/AdminBookingsTable";
+import AdminEventsModal from "../components/AdminEventsModal";
 import Dashboard from "../components/Dashboard";
 import {
   getAdminEvents,
+  getAdminBookings,
   createAdminEvent,
   updateAdminEvent,
   deleteAdminEvent,
 } from "../services/adminService";
-import { formatDate } from "../Utils/formatDate";
 
 function AdminPage() {
   const [events, setEvents] = useState([]);
+  const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showAddModal, setShowAddModal] = useState(false);
@@ -23,10 +27,35 @@ function AdminPage() {
     status: "active",
   });
 
+  const resetForm = () => {
+    setFormData({
+      id: null,
+      title: "",
+      description: "",
+      date: "",
+      max_capacity: "",
+      available_slots: "",
+      status: "active",
+    });
+  };
+
   useEffect(() => {
     getAdminEvents()
       .then((data) => {
         setEvents(data);
+      })
+      .catch((error) => {
+        setError(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    getAdminBookings()
+      .then((data) => {
+        setBookings(data);
       })
       .catch((error) => {
         setError(error);
@@ -65,15 +94,7 @@ function AdminPage() {
       const updateEvents = await getAdminEvents();
       setEvents(updateEvents);
 
-      setFormData({
-        id: null,
-        title: "",
-        description: "",
-        date: "",
-        max_capacity: "",
-        available_slots: "",
-        status: "active",
-      });
+      resetForm();
 
       setShowAddModal(false);
     } catch (error) {
@@ -81,7 +102,7 @@ function AdminPage() {
     }
   };
 
-  const handleEditEvent = async (event) => {
+  const handleEditEvent = (event) => {
     setFormData({
       id: event.id,
       title: event.title,
@@ -128,7 +149,10 @@ function AdminPage() {
           <button
             className="admin-add-button"
             type="button"
-            onClick={() => setShowAddModal(true)}
+            onClick={() => {
+              resetForm();
+              setShowAddModal(true);
+            }}
           >
             add event
           </button>
@@ -143,154 +167,41 @@ function AdminPage() {
 
         {!loading && !error && events.length > 0 && (
           <div className="admin-table-wrapper">
-            <table className="admin-table">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Title</th>
-                  <th>Date</th>
-                  <th>Capacity</th>
-                  <th>Available</th>
-                  <th>Status</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {events.map((event) => (
-                  <tr key={event.id}>
-                    <td>{event.id}</td>
-                    <td>{event.title}</td>
-                    <td>{formatDate(event.date)}</td>
-                    <td>{event.max_capacity}</td>
-                    <td>{event.available_slots}</td>
-                    <td>{event.status}</td>
-                    <td>
-                      <div className="admin-table-actions">
-                        <button
-                          className="admin-edit-button"
-                          type="button"
-                          onClick={() => handleEditEvent(event)}
-                        >
-                          edit
-                        </button>
-
-                        <button
-                          className="admin-delete-button"
-                          type="button"
-                          onClick={() => handleDeleteEvent(event.id)}
-                        >
-                          delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <AdminEventsTable
+              events={events}
+              onEdit={handleEditEvent}
+              onDelete={handleDeleteEvent}
+            />
           </div>
         )}
       </section>
 
       {showAddModal && (
-        <div className="admin-modal-container">
-          <div className="admin-modal-content">
-            <h2 className="admin-modal-title">
-              {formData.id ? "edit event" : "add event"}
-            </h2>
-
-            <form className="admin-form" onSubmit={handleSubmitEvent}>
-              <div className="admin-form-group">
-                <label htmlFor="title">title</label>
-                <input
-                  id="title"
-                  name="title"
-                  type="text"
-                  value={formData.title}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="admin-form-group">
-                <label htmlFor="description">description</label>
-                <textarea
-                  id="description"
-                  name="description"
-                  rows="4"
-                  value={formData.description}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="admin-form-group">
-                <label htmlFor="date">date</label>
-                <input
-                  id="date"
-                  name="date"
-                  type="date"
-                  value={formData.date}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="admin-form-group">
-                <label htmlFor="max_capacity">capacity</label>
-                <input
-                  id="max_capacity"
-                  name="max_capacity"
-                  type="number"
-                  min="1"
-                  value={formData.max_capacity}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="admin-form-group">
-                <label htmlFor="available_slots">available slots</label>
-                <input
-                  id="available_slots"
-                  name="available_slots"
-                  type="number"
-                  min="0"
-                  value={formData.available_slots}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="admin-form-group">
-                <label htmlFor="status">status</label>
-                <select
-                  id="status"
-                  name="status"
-                  value={formData.status}
-                  onChange={handleChange}
-                >
-                  <option value="active">active</option>
-                  <option value="inactive">inactive</option>
-                </select>
-              </div>
-
-              <div className="admin-modal-actions">
-                <button
-                  type="button"
-                  className="admin-cancel-button"
-                  onClick={() => setShowAddModal(false)}
-                >
-                  cancel
-                </button>
-
-                <button className="admin-save-button" type="submit">
-                  save
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
+        <AdminEventsModal
+          formData={formData}
+          onChange={handleChange}
+          onSubmit={handleSubmitEvent}
+          closeModal={() => {
+            resetForm();
+            setShowAddModal(false);
+          }}
+        />
       )}
+
+      <section className="admin-header">
+        <h1 className="admin-title">bookings</h1>
+        <p className="admin-subtitle">
+          view reservations submitted through the public booking form.
+        </p>
+      </section>
+
+      <section className="admin-content">
+        {bookings.length > 0 && (
+          <div className="admin-table-wrapper">
+            <AdminBookingsTable bookings={bookings} />
+          </div>
+        )}
+      </section>
     </main>
   );
 }

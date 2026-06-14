@@ -7,9 +7,13 @@ function Navbar() {
         events
       </NavLink>
 
+      <span className="navbar-separator">|</span>
+
       <NavLink className="navbar-item" to="/feedback">
         feedback
       </NavLink>
+
+      <span className="navbar-separator">|</span>
 
       <NavLink className="navbar-item" to="/admin">
         admin

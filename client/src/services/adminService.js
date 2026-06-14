@@ -71,6 +71,23 @@ export async function deleteAdminEvent(id) {
     return response.json();
   } catch (error) {
     console.error("Error deleting event:", error);
+    MediaKeyStatusMap;
+    throw error;
+    k;
+  }
+}
+
+export async function getAdminBookings() {
+  try {
+    const response = await fetch("http://localhost:3001/api/admin/bookings");
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch bookings");
+    }
+
+    return response.json();
+  } catch (error) {
+    console.log("Error fetching bookings:", error);
     throw error;
   }
 }

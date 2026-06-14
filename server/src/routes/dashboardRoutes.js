@@ -12,8 +12,9 @@ router.get("/", async (req, res) => {
         FROM events`);
 
     const totalBookings = await db.get(`
-        SELECT COUNT(id) AS totalBookings 
-        FROM bookings`);
+        SELECT COUNT(bookings.id) AS totalBookings
+        FROM bookings
+        JOIN events ON bookings.event_id = events.id`);
 
     const totalFeedback = await db.get(`
         SELECT COUNT(id) AS totalFeedback
