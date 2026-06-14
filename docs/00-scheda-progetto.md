@@ -58,7 +58,6 @@ Il flusso previsto è il seguente:
 | Feedback semplice tramite codice prenotazione.      | Reset password.                                |
 | Gestione CRUD degli eventi lato amministratore.     | Ruoli amministrativi complessi.                |
 | Elenco prenotazioni lato amministratore.            | Notifiche push.                                |
-| Consultazione feedback lato amministratore.         | Integrazione calendario.                       |
 | Dashboard amministrativa con indicatori elementari. | Analytics avanzati.                            |
 | API REST.                                           | Intelligenza artificiale operativa.            |
 | Modello dati relazionale.                           | Hardening cybersecurity da produzione.         |

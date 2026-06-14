@@ -70,13 +70,13 @@ FINE FUNZIONE
 FUNZIONE calcolaDashboard()
     totale_eventi = conta eventi registrati
     totale_prenotazioni = conta prenotazioni registrate
-    totale_partecipanti = somma participants delle prenotazioni confermate
-    totale_feedback = conta i feedback registrati
-    riepilogo_eventi = per ogni evento:
-        totale_prenotazioni_evento
-        somma_participants_evento
-        rating_medio_evento
-    return totale_eventi, totale_prenotazioni, totale_partecipanti, totale_feedback, riepilogo_eventi
+    totale_feedback = conta feedback registrati
+    valutazione_media = calcola media delle valutazioni
+
+    return totale_eventi,
+           totale_prenotazioni,
+           totale_feedback,
+           valutazione_media
 FINE FUNZIONE
 ```
 

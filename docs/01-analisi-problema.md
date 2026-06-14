@@ -36,7 +36,7 @@ Queste criticità non riguardano solo la pubblicazione delle informazioni verso 
 
 L’obiettivo della digitalizzazione è rendere più ordinata e tracciabile la gestione di alcuni processi museali.
 MuseoHub propone un sistema web che consente al visitatore di consultare eventi o servizi culturali, effettuare una prenotazione guest e ricevere un codice di conferma a video dopo la verifica della disponibilità da parte del sistema.
-Dal lato amministrativo, il sistema permette di gestire gli eventi, consultare le prenotazioni raccolte e visualizzare alcuni indicatori elementari tramite una dashboard minima.
+Dal lato amministrativo, il sistema permette di gestire gli eventi tramite operazioni CRUD, consultare le prenotazioni raccolte e visualizzare indicatori sintetici attraverso una dashboard amministrativa.
 Il prototipo non mira a sostituire un gestionale museale completo, ma a dimostrare come un processo frammentato possa essere trasformato in un flusso digitale integrato.
 
 ## Confini del problema

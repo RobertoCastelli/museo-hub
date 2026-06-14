@@ -129,3 +129,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** completamento del CRUD eventi tramite operazioni di creazione, modifica ed eliminazione; refactoring dell'interfaccia amministrativa mediante estrazione dei componenti dedicati alla tabella eventi e alla modal di gestione; integrazione della dashboard amministrativa e realizzazione della consultazione delle prenotazioni tramite endpoint dedicato e visualizzazione tabellare.
 
 **Riferimento Git:** commit relativo al consolidamento dell'area amministrativa e alla consultazione delle prenotazioni.
+
+### 019 — 14/06/2026 — Allineamento documentazione e diagrammi
+
+**Fase:** consolidamento documentale.
+
+**Attività:** revisione della documentazione tecnica e dei diagrammi per garantire la coerenza con il prototipo effettivamente implementato. Aggiornati requisiti, processi, casi d’uso, modello dati, architettura, API, checklist di progetto, decision log e README. Rimossi riferimenti a funzionalità non implementate e riallineati diagrammi e documentazione alle funzionalità realmente presenti nel sistema.
+
+**Riferimento Git:** commit relativo all’allineamento della documentazione con l’implementazione corrente.

@@ -1,7 +1,7 @@
 # Modello dati
 
-_Questo diagramma rappresenta il modello dati preliminare di MuseoHub._  
-_Mostra le entità principali e le relazioni previste tra eventi, prenotazioni, feedback e una gestione amminitrativa minima._
+_Questo diagramma rappresenta il modello dati del prototipo MuseoHub._  
+_Mostra le entità principali e le relazioni previste tra eventi, prenotazioni e feedback._
 
 ---
 
@@ -10,7 +10,6 @@ erDiagram
     EVENTS ||--o{ BOOKINGS : riceve
     EVENTS ||--o{ FEEDBACK : raccoglie
     BOOKINGS ||--o| FEEDBACK : collega
-    ADMIN_USERS ||--o{ EVENTS : gestisce
 
     EVENTS {
         integer id PK
@@ -29,7 +28,7 @@ erDiagram
         string visitor_name
         string visitor_email
         integer participants
-        string status
+        datetime created_at
     }
 
     FEEDBACK {
@@ -38,11 +37,6 @@ erDiagram
         string booking_code FK
         integer rating
         string comment
-    }
-
-    ADMIN_USERS {
-        integer id PK
-        string username
-        string role
+        datetime created_at
     }
 ```

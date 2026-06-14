@@ -1,7 +1,7 @@
 # API
 
 _Questo documento descrive le API REST previste per il prototipo MuseoHub_  
-_Definisce il contratto preliminare di comunicazione tra frontend React, backend Express e database._
+_Definisce il contratto di comunicazione tra frontend React, backend Express e database SQLite._
 
 ---
 
@@ -16,15 +16,14 @@ _Definisce il contratto preliminare di comunicazione tra frontend React, backend
 
 ## Endpoint area amministrativa
 
-| Metodo | Endpoint                | Requisito | Scopo                                       | Dati principali                                                    |
-| ------ | ----------------------- | --------- | ------------------------------------------- | ------------------------------------------------------------------ |
-| GET    | `/api/admin/events`     | RF08      | Consultare gli eventi lato amministratore   | elenco eventi                                                      |
-| POST   | `/api/admin/events`     | RF08      | Creare un nuovo evento o servizio culturale | dati evento                                                        |
-| PUT    | `/api/admin/events/:id` | RF08      | Modificare un evento esistente              | dati evento aggiornati                                             |
-| DELETE | `/api/admin/events/:id` | RF08      | Eliminare o disattivare un evento           | identificativo evento                                              |
-| GET    | `/api/admin/bookings`   | RF09      | Consultare le prenotazioni ricevute         | elenco prenotazioni                                                |
-| GET    | `/api/admin/feedback`   | RF10      | Consultare i feedback inviati               | elenco feedback                                                    |
-| GET    | `/api/admin/dashboard`  | RF11      | Restituire indicatori per la dashboard      | eventi, prenotazioni, partecipanti, feedback, riepilogo per evento |
+| Metodo | Endpoint                | Requisito | Scopo                                     | Dati principali                              |
+| ------ | ----------------------- | --------- | ----------------------------------------- | -------------------------------------------- |
+| GET    | `/api/admin`            | RF08      | Consultare gli eventi lato amministratore | elenco eventi                                |
+| POST   | `/api/admin/events`     | RF08      | Creare un nuovo evento                    | dati evento                                  |
+| PUT    | `/api/admin/events/:id` | RF08      | Modificare un evento esistente            | dati evento aggiornati                       |
+| DELETE | `/api/admin/events/:id` | RF08      | Eliminare un evento dal catalogo          | identificativo evento                        |
+| GET    | `/api/admin/bookings`   | RF09      | Consultare le prenotazioni ricevute       | prenotazione, evento, visitatore, email      |
+| GET    | `/api/dashboard`        | RF11      | Restituire indicatori dashboard           | eventi, prenotazioni, feedback, rating medio |
 
 ## Errori principali previsti
 

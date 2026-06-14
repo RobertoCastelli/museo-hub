@@ -28,7 +28,7 @@ Diagramma di riferimento:
 6. Il sistema salva la prenotazione nel database.
 7. Il sistema restituisce un codice prenotazione a video.
 8. Il visitatore può inviare un feedback usando il codice prenotazione.
-9. L’amministratore consulta eventi, prenotazioni, feedback e indicatori minimi.
+9. L’amministratore consulta eventi, prenotazioni e indicatori sintetici tramite l’area amministrativa.
 
 Diagramma di riferimento:
 

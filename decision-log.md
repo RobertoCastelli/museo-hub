@@ -19,3 +19,9 @@ _Questo documento registra le principali decisioni progettuali prese durante lo 
 - D013 - **Navigazione eventi:** card interamente cliccabile
 - D014 - **Monitoraggio applicativo:** health check visuale backend e database nel footer
 - D015 - **Conferma prenotazione:** visualizzazione del codice prenotazione tramite modal dedicata
+- D016 - **Dashboard:** mantenuta come componente riutilizzabile e integrata nella pagina Admin
+- D017 - **Area Admin:** realizzata come sezione gestionale unica con dashboard, CRUD eventi e prenotazioni
+- D018 - **Gestione eventi:** implementata in forma tabellare per privilegiare leggibilità e operatività
+- D019 - **CRUD eventi:** gestito tramite modal unica riutilizzata per creazione e modifica evento
+- D020 - **Prenotazioni Admin:** previste in sola consultazione; il prototipo verte sulla gestione eventi
+- D021 - **Autenticazione Admin:** esclusa dal prototipo; l’area Admin è simulata e documentata come limite progettuale

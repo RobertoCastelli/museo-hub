@@ -11,17 +11,17 @@ MuseoHub adotta un’architettura web client-server.
 
 - Il frontend gestisce l’interfaccia utente e invia richieste HTTP al backend.
 - Il backend rende disponibili endpoint API per leggere e inviare dati, gestisce la logica applicativa e comunica con il database.
-- Il database conserva i dati relativi a eventi, prenotazioni, feedback ed eventuale accesso amministrativo.
+- Il database conserva i dati relativi a eventi, prenotazioni e feedback.
 
 ## Componenti principali
 
-| Componente      | Tecnologia                           | Responsabilità                                                                  |
-| --------------- | ------------------------------------ | ------------------------------------------------------------------------------- |
-| Frontend        | React + Vite                         | Interfaccia utente, navigazione, form e visualizzazione dati                    |
-| Backend         | Node.js + Express                    | API REST, logica applicativa, validazione delle richieste e accesso ai dati     |
-| Database        | SQLite                               | Persistenza strutturata di eventi, prenotazioni, feedback e dati amministrativi |
-| Deploy frontend | Netlify                              | Pubblicazione dell’interfaccia web                                              |
-| Deploy backend  | Render (se tecnicamente sostenibile) | Pubblicazione del servizio API                                                  |
+| Componente      | Tecnologia                           | Responsabilità                                                              |
+| --------------- | ------------------------------------ | --------------------------------------------------------------------------- |
+| Frontend        | React + Vite                         | Interfaccia utente, navigazione, form e visualizzazione dati                |
+| Backend         | Node.js + Express                    | API REST, logica applicativa, validazione delle richieste e accesso ai dati |
+| Database        | SQLite                               | Persistenza strutturata di eventi, prenotazioni e feedback                  |
+| Deploy frontend | Netlify                              | Pubblicazione dell’interfaccia web                                          |
+| Deploy backend  | Render (se tecnicamente sostenibile) | Pubblicazione del servizio API                                              |
 
 ## Frontend
 
@@ -54,7 +54,6 @@ Il database conserva in modo strutturato:
 - eventi o servizi culturali;
 - prenotazioni guest;
 - feedback;
-- eventuali dati amministrativi di supporto.
 
 ## Flusso di configurazione e utilizzo del database
 

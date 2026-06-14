@@ -1,6 +1,6 @@
 # Architettura
 
-_Questo diagramma rappresenta l’architettura applicativa preliminare di MuseoHub._  
+_Questo diagramma rappresenta l’architettura applicativa del prototipo MuseoHub._  
 _Mostra la comunicazione tra frontend, backend, database e servizi di deploy._
 
 ---
@@ -28,11 +28,13 @@ flowchart TD
     APP --> BOOKINGS[bookingsRoutes.js]
     APP --> FEEDBACK[feedbackRoutes.js]
     APP --> DASHBOARD[dashboardRoutes.js]
+    APP --> ADMIN[adminRoutes.js]
 
     EVENTS --> DBJS[database.js]
     BOOKINGS --> DBJS
     FEEDBACK --> DBJS
     DASHBOARD --> DBJS
+    ADMIN --> DBJS
 
     DBJS --> SQLITE[(museohub.sqlite)]
 

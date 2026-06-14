@@ -30,11 +30,14 @@ _Serve per controllare l’avanzamento delle attività e garantire che progettaz
 - [x] Creare struttura `client/`
 - [x] Implementare frontend React
 - [x] Integrare frontend e backend
+- [x] Implementare dashboard amministrativa
+- [x] Implementare CRUD eventi amministrativo
+- [x] Implementare consultazione prenotazioni amministrative
 
 ## Test e deploy
 
-- [x] Documentare test funzionali
-- [x] Salvare screenshot principali
+- [ ] Documentare test funzionali
+- [ ] Salvare screenshot principali
 - [ ] Pubblicare frontend su Netlify
 - [ ] Pubblicare backend su Render (se tecnicamente sostenibile)
 - [ ] Documentare istruzioni di esecuzione

@@ -23,8 +23,7 @@ flowchart LR
         direction TB
         UC06((UC06 Gestire eventi))
         UC07((UC07 Consultare prenotazioni))
-        UC08((UC08 Consultare feedback))
-        UC09((UC09 Visualizzare dashboard))
+        UC08((UC08 Visualizzare dashboard))
     end
 
     V --> UC01
@@ -36,5 +35,4 @@ flowchart LR
     A --> UC06
     A --> UC07
     A --> UC08
-    A --> UC09
 ```

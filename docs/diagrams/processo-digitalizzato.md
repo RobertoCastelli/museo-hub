@@ -24,7 +24,5 @@ flowchart TD
     L --> M[Feedback associato a prenotazione ed evento]
 
     H --> N[Amministratore consulta prenotazioni]
-    M --> O[Amministratore consulta feedback]
     N --> P[Dashboard con indicatori minimi]
-    O --> P
 ```

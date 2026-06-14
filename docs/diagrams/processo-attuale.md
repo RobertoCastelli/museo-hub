@@ -1,7 +1,7 @@
 # Processo attuale
 
 _Questo diagramma rappresenta il processo simulato prima dell’introduzione di MuseoHub._
-_Serve a evidenziare la gestione frammentata di eventi, prenotazioni, disponibilità e feedback._
+_Serve a evidenziare la gestione frammentata di eventi, prenotazioni e feedback prima dell’introduzione di un sistema integrato._
 
 ---
 
