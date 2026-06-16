@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { getEventInitials } from "../Utils/getEventInitials";
 import BookingForm from "../components/BookingForm";
 import { getEventById } from "../services/eventsService";
 import { formatDate } from "../Utils/formatDate";
@@ -55,11 +56,9 @@ function EventDetailPage() {
         {!loading && !error && event && (
           <div className="detail-layout">
             <article className="detail-info">
-              <img
-                className="detail-image"
-                src="https://placehold.co/500x200?text=detail+event"
-                alt="detail event"
-              />
+              <div className="detail-thumbnail">
+                {getEventInitials(event.title)}
+              </div>
 
               <h1 className="detail-title">{event.title}</h1>
               <p className="detail-description">{event.description}</p>

@@ -32,9 +32,9 @@ function EventsPage() {
 
       <section className="events-content">
         {error && <p className="events-message">Error: {error.message}</p>}
-        {loading && <p className="events-message">Loading events...</p>}
+        {loading && <p className="events-message">loading events...</p>}
         {!loading && !error && events.length === 0 && (
-          <p className="events-message">No events available.</p>
+          <p className="events-message">no events available.</p>
         )}
         {!loading && !error && events.length > 0 && (
           <div className="events-list">

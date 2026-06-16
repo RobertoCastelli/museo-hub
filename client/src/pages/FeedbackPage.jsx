@@ -96,7 +96,7 @@ function FeedbackPage() {
           </div>
 
           <div className="feedback-form-group">
-            <label htmlFor="rating">rating</label>
+            <label>rating</label>
 
             <div className="feedback-stars">
               {[1, 2, 3, 4, 5].map((star) => (

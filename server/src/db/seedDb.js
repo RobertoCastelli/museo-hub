@@ -15,32 +15,34 @@ async function seedDb() {
     `
         INSERT INTO events (title, description, date, max_capacity, available_slots, status) VALUES (?, ?, ?, ?, ?, ?)`,
     [
-      "Mostra d'Arte Contemporanea",
-      "una mostra che presenta opere di artisti contemporanei di fama internazionale.",
+      "Contemporary Art Open Exhibition",
+      "A free exhibition presenting selected contemporary artworks from emerging artists, with a focus on visual experimentation and new forms of cultural expression.",
       "2026-07-15",
       100,
       100,
       "active",
     ],
   );
+
   await db.run(
     `
         INSERT INTO events (title, description, date, max_capacity, available_slots, status) VALUES (?, ?, ?, ?, ?, ?)`,
     [
-      "Mostra di Fotografia",
-      "una mostra che presenta una selezione di fotografie di artisti emergenti.",
+      "Photography and Urban Memory",
+      "A free photography exhibition exploring urban spaces, local memory and everyday cultural heritage through a curated selection of documentary images.",
       "2026-08-01",
       50,
       50,
       "active",
     ],
   );
+
   await db.run(
     `
         INSERT INTO events (title, description, date, max_capacity, available_slots, status) VALUES (?, ?, ?, ?, ?, ?)`,
     [
-      "Mostra di Scultura",
-      "una mostra che presenta una selezione di sculture di artisti contemporanei.",
+      "Sculpture Gallery Guided Visit",
+      "A free guided visit through the sculpture gallery, introducing visitors to materials, techniques and selected works from the museum collection.",
       "2026-09-10",
       30,
       30,

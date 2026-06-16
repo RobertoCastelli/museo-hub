@@ -6,6 +6,8 @@ MuseoHub è un prototipo web full-stack sviluppato nell’ambito del Project Wor
 
 Il progetto simula una piccola realtà museale e si concentra sulla digitalizzazione di alcuni processi gestionali relativi a eventi culturali, prenotazioni guest, raccolta dei feedback e consultazione amministrativa dei dati tramite dashboard, API REST e database relazionale.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8685f865-9684-4edb-8657-decb9fb7a254/deploy-status)](https://app.netlify.com/projects/museohub/deploys)
+
 ## Stato del progetto
 
 Prototipo funzionale quasi completato.

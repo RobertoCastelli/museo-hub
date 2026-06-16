@@ -159,10 +159,10 @@ function AdminPage() {
         </div>
 
         {error && <p className="admin-message">Error: {error.message}</p>}
-        {loading && <p className="admin-message">Loading events...</p>}
+        {loading && <p className="admin-message">loading events...</p>}
 
         {!loading && !error && events.length === 0 && (
-          <p className="admin-message">No events available.</p>
+          <p className="admin-message">no events available.</p>
         )}
 
         {!loading && !error && events.length > 0 && (
@@ -196,10 +196,12 @@ function AdminPage() {
       </section>
 
       <section className="admin-content">
-        {bookings.length > 0 && (
+        {bookings.length > 0 ? (
           <div className="admin-table-wrapper">
             <AdminBookingsTable bookings={bookings} />
           </div>
+        ) : (
+          "no bookings available..."
         )}
       </section>
     </main>
