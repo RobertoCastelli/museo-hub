@@ -16,6 +16,10 @@ async function initDb() {
   console.log("MuseoHub database initialized successfully");
 }
 // Catch any errors during initialization
-initDb().catch((error) => {
-  console.error("Database initialization failed:", error);
-});
+if (require.main === module) {
+  initDb().catch((error) => {
+    console.error("Database initialization failed:", error);
+  });
+}
+
+module.exports = initDb;

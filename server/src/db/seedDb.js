@@ -53,6 +53,10 @@ async function seedDb() {
 }
 
 // Catch any errors during insertion of seed data
-seedDb().catch((error) => {
-  console.error("Seed data insertion failed:", error);
-});
+if (require.main === module) {
+  seedDb().catch((error) => {
+    console.error("Seed data insertion failed:", error);
+  });
+}
+
+module.exports = seedDb;
