@@ -17,7 +17,7 @@ export async function getAdminEvents() {
 
 export async function createAdminEvent(formEventData) {
   try {
-    const response = await fetch("http://localhost:3001/api/admin/events", {
+    const response = await fetch(`${API_BASE_URL}/admin/events`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,16 +38,13 @@ export async function createAdminEvent(formEventData) {
 
 export async function updateAdminEvent(id, formEventData) {
   try {
-    const response = await fetch(
-      `http://localhost:3001/api/admin/events/${id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formEventData),
+    const response = await fetch(`${API_BASE_URL}/api/admin/events/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify(formEventData),
+    });
 
     if (!response.ok) {
       throw new Error("Failed to edit event");
@@ -61,12 +58,9 @@ export async function updateAdminEvent(id, formEventData) {
 
 export async function deleteAdminEvent(id) {
   try {
-    const response = await fetch(
-      `http://localhost:3001/api/admin/events/${id}`,
-      {
-        method: "DELETE",
-      },
-    );
+    const response = await fetch(`${API_BASE_URL}/api/admin/events/${id}`, {
+      method: "DELETE",
+    });
     if (!response.ok) {
       throw new Error("Failed to delete event");
     }
@@ -80,7 +74,7 @@ export async function deleteAdminEvent(id) {
 
 export async function getAdminBookings() {
   try {
-    const response = await fetch("http://localhost:3001/api/admin/bookings");
+    const response = await fetch(`${API_BASE_URL}/api/admin/bookings`);
 
     if (!response.ok) {
       throw new Error("Failed to fetch bookings");
