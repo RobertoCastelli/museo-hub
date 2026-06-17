@@ -27,7 +27,7 @@ function FeedbackPage() {
     e.preventDefault();
 
     if (!formData.rating) {
-      setErrorMessage("Please select a rating before submitting feedback.");
+      setErrorMessage("please select a rating before submitting feedback.");
       return;
     }
 
@@ -52,7 +52,7 @@ function FeedbackPage() {
     } catch (error) {
       setFeedbackResult(null);
       setErrorMessage(
-        "Feedback could not be submitted. Please check the booking code and rating",
+        "feedback could not be submitted. Please check the booking code and rating",
       );
     }
   };
@@ -121,7 +121,7 @@ function FeedbackPage() {
           </div>
 
           <div className="feedback-form-group">
-            <label htmlFor="comment">comment</label>
+            <label htmlFor="comment">comment (optional)</label>
 
             <textarea
               id="comment"

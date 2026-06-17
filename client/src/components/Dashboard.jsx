@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getDashboard } from "../services/dashboardService";
 import { GoCalendar, GoCommentDiscussion } from "react-icons/go";
-import { FaStar } from "react-icons/fa";
+import { FaRegStar } from "react-icons/fa";
 import { IoTicketOutline } from "react-icons/io5";
 
 function Dashboard() {
@@ -58,7 +58,7 @@ function Dashboard() {
           </article>
 
           <article className="dashboard-card">
-            <FaStar className="dashboard-icon" />
+            <FaRegStar className="dashboard-icon" />
             <span className="dashboard-value">
               {Number(stats.averageRating).toFixed(1)}
             </span>

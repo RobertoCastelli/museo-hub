@@ -137,3 +137,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** revisione della documentazione tecnica e dei diagrammi per garantire la coerenza con il prototipo effettivamente implementato. Aggiornati requisiti, processi, casi d’uso, modello dati, architettura, API, checklist di progetto, decision log e README. Rimossi riferimenti a funzionalità non implementate e riallineati diagrammi e documentazione alle funzionalità realmente presenti nel sistema.
 
 **Riferimento Git:** commit relativo all’allineamento della documentazione con l’implementazione corrente.
+
+### 020 — 15-17/06/2026 — Deploy cloud e collaudo funzionale finale
+
+**Fase:** consolidamento applicativo e deploy.
+
+**Attività:** pubblicazione del backend Express su Render, collegamento del frontend Netlify al backend tramite variabile di ambiente, risoluzione dei problemi di compatibilità SQLite in ambiente cloud, introduzione del bootstrap automatico del database all’avvio dell’applicazione, correzione degli endpoint amministrativi, aggiunta dei redirect Netlify per le route React, validazione dei dati degli eventi, messaggi di conferma per le operazioni CRUD e piccole rifiniture dell’interfaccia.
+
+**Riferimento Git:** commit relativi al deploy cloud, al bootstrap automatico del database e alle correzioni funzionali emerse durante il collaudo online.

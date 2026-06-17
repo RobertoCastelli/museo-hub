@@ -17,7 +17,7 @@ export async function getAdminEvents() {
 
 export async function createAdminEvent(formEventData) {
   try {
-    const response = await fetch(`${API_BASE_URL}/admin/events`, {
+    const response = await fetch(`${API_BASE_URL}/api/admin/events`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

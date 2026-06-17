@@ -16,6 +16,7 @@ function AdminPage() {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState("");
   const [showAddModal, setShowAddModal] = useState(false);
   const [formData, setFormData] = useState({
     id: null,
@@ -77,12 +78,22 @@ function AdminPage() {
   const handleSubmitEvent = async (e) => {
     e.preventDefault();
 
+    const maxCapacity = Number(formData.max_capacity);
+    const availableSlots = Number(formData.available_slots);
+
+    if (availableSlots > maxCapacity) {
+      setError(
+        new Error("available slots cannot be greater than maximum capacity."),
+      );
+      return;
+    }
+
     const eventData = {
       title: formData.title.trim(),
       description: formData.description.trim(),
       date: formData.date,
-      max_capacity: Number(formData.max_capacity),
-      available_slots: Number(formData.available_slots),
+      max_capacity: maxCapacity,
+      available_slots: availableSlots,
       status: formData.status,
     };
 
@@ -93,12 +104,17 @@ function AdminPage() {
 
       const updateEvents = await getAdminEvents();
       setEvents(updateEvents);
-
+      setError(null);
+      setSuccessMessage(
+        formData.id === null
+          ? "event created successfully."
+          : "event updated successfully.",
+      );
       resetForm();
-
       setShowAddModal(false);
     } catch (error) {
-      console.error("Error creating event", error);
+      console.error("error saving event", error);
+      setError(error);
     }
   };
 
@@ -126,8 +142,9 @@ function AdminPage() {
       await deleteAdminEvent(id);
       setError(null);
       setEvents((prevEvents) => prevEvents.filter((event) => event.id !== id));
+      setSuccessMessage("event deleted successfully.");
     } catch (error) {
-      console.error("Error deleting event:", error);
+      console.error("error deleting event:", error);
     }
   };
 
@@ -158,7 +175,8 @@ function AdminPage() {
           </button>
         </div>
 
-        {error && <p className="admin-message">Error: {error.message}</p>}
+        {error && <p className="admin-message">error: {error.message}</p>}
+        {successMessage && <p className="admin-message">{successMessage}</p>}
         {loading && <p className="admin-message">loading events...</p>}
 
         {!loading && !error && events.length === 0 && (
