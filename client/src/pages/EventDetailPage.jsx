@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getEventInitials } from "../Utils/getEventInitials";
+import { getEventInitials } from "../utils/getEventInitials";
 import BookingForm from "../components/BookingForm";
 import { getEventById } from "../services/eventsService";
-import { formatDate } from "../Utils/formatDate";
+import { formatDate } from "../utils/formatDate";
 import { GoCalendar, GoPeople } from "react-icons/go";
 
 function EventDetailPage() {

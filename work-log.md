@@ -145,3 +145,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** pubblicazione del backend Express su Render, collegamento del frontend Netlify al backend tramite variabile di ambiente, risoluzione dei problemi di compatibilità SQLite in ambiente cloud, introduzione del bootstrap automatico del database all’avvio dell’applicazione, correzione degli endpoint amministrativi, aggiunta dei redirect Netlify per le route React, validazione dei dati degli eventi, messaggi di conferma per le operazioni CRUD e piccole rifiniture dell’interfaccia.
 
 **Riferimento Git:** commit relativi al deploy cloud, al bootstrap automatico del database e alle correzioni funzionali emerse durante il collaudo online.
+
+### 021 — 08/07/2026 — Rifinitura funzionale e collaudo area amministrativa
+
+**Fase:** consolidamento applicativo.
+
+**Attività:** correzione delle anomalie emerse durante il collaudo del prototipo, con particolare riferimento al corretto collegamento dei service frontend alle API amministrative, al miglioramento della validazione dei dati inseriti nei form, all'uniformazione dei messaggi di conferma ed errore, all'introduzione del controllo sui feedback duplicati tramite booking code e ad alcune rifiniture dell'interfaccia amministrativa.
+
+**Riferimento Git:** commit relativo al consolidamento dell'area amministrativa e alle correzioni emerse durante il collaudo finale.

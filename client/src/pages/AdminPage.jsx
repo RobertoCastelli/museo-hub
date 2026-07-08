@@ -175,8 +175,10 @@ function AdminPage() {
           </button>
         </div>
 
-        {error && <p className="admin-message">error: {error.message}</p>}
-        {successMessage && <p className="admin-message">{successMessage}</p>}
+        {error && <p className="admin-message error">error: {error.message}</p>}
+        {successMessage && (
+          <p className="admin-message success">{successMessage}</p>
+        )}
         {loading && <p className="admin-message">loading events...</p>}
 
         {!loading && !error && events.length === 0 && (

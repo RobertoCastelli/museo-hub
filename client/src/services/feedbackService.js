@@ -1,4 +1,4 @@
-import API_BASE_URL from "../Utils/apiConfig";
+import API_BASE_URL from "../utils/apiConfig";
 
 export async function createFeedback(feedbackData) {
   try {
@@ -11,7 +11,8 @@ export async function createFeedback(feedbackData) {
     });
 
     if (!response.ok) {
-      throw new Error("Failed to create feedback");
+      const errorData = await response.json();
+      throw new Error(errorData.error || "feedback could not be submitted.");
     }
 
     return response.json();

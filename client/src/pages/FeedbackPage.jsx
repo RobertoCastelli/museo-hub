@@ -51,9 +51,7 @@ function FeedbackPage() {
       });
     } catch (error) {
       setFeedbackResult(null);
-      setErrorMessage(
-        "feedback could not be submitted. Please check the booking code and rating",
-      );
+      setErrorMessage(error.message);
     }
   };
 
@@ -70,7 +68,7 @@ function FeedbackPage() {
       <section className="feedback-content">
         {feedbackResult && (
           <div className="feedback-message success">
-            <h2>feedback submitted successfully</h2>
+            <h3>feedback submitted successfully.</h3>
             <p>thank you for sharing your experience.</p>
           </div>
         )}

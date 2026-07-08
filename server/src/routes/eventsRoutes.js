@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 
     res.status(200).json(events);
   } catch (error) {
-    res.status(500).json({ error: "Fetch events failed" });
+    res.status(500).json({ error: "fetch events failed" });
   }
 });
 
@@ -26,7 +26,7 @@ router.get("/:id", async (req, res) => {
     const eventId = Number(req.params.id);
 
     if (isNaN(eventId) || eventId <= 0) {
-      return res.status(400).json({ error: "Invalid event ID" });
+      return res.status(400).json({ error: "invalid event ID" });
     }
 
     const event = await db.get(
@@ -39,12 +39,12 @@ router.get("/:id", async (req, res) => {
     );
 
     if (!event) {
-      return res.status(404).json({ error: "Event not found" });
+      return res.status(404).json({ error: "event not found" });
     }
 
     res.status(200).json(event);
   } catch (error) {
-    res.status(500).json({ error: "Fetch event failed" });
+    res.status(500).json({ error: "fetch event failed" });
   }
 });
 

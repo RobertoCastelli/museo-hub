@@ -31,7 +31,7 @@ router.get("/", async (req, res) => {
       averageRating: averageRating.averageRating || 0,
     });
   } catch (error) {
-    res.status(500).json({ error: "Fetch stats failed" });
+    res.status(500).json({ error: "fetch stats failed" });
   }
 });
 

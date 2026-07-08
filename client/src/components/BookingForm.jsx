@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { createBooking } from "../services/bookingsService";
-import { formatDate } from "../Utils/formatDate";
+import { formatDate } from "../utils/formatDate";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
 function BookingForm({ eventId, eventDate, eventTitle, onBookingSuccess }) {
@@ -88,7 +88,7 @@ function BookingForm({ eventId, eventDate, eventTitle, onBookingSuccess }) {
             <IoCheckmarkCircleOutline className="booking-modal-icon" />
 
             <h2 className="booking-modal-title">
-              booking confirmed successfully
+              booking confirmed successfully.
             </h2>
 
             <div className="booking-modal-text">

@@ -14,14 +14,14 @@ router.post("/", async (req, res) => {
     const { event_id, visitor_name, visitor_email, participants } = req.body;
 
     if (!event_id || !visitor_name || !visitor_email || !participants) {
-      return res.status(400).json({ error: "Missing required fields" });
+      return res.status(400).json({ error: "missing required fields" });
     }
 
     const eventId = Number(event_id);
     const participantsNumber = Number(participants);
 
     if (isNaN(eventId) || eventId <= 0) {
-      return res.status(400).json({ error: "Invalid event ID" });
+      return res.status(400).json({ error: "invalid event ID" });
     }
     if (
       isNaN(participantsNumber) ||
@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
     ) {
       return res
         .status(400)
-        .json({ error: "Invalid participants number (e.g., 1-4)" });
+        .json({ error: "invalid participants number (e.g., 1-4)" });
     }
 
     const db = await openDb();
@@ -45,15 +45,15 @@ router.post("/", async (req, res) => {
     );
 
     if (!event) {
-      return res.status(404).json({ error: "Event not found" });
+      return res.status(404).json({ error: "event not found" });
     }
     if (event.status !== "active") {
-      return res.status(400).json({ error: "Event is not active" });
+      return res.status(400).json({ error: "event is not active" });
     }
     if (event.available_slots < participantsNumber) {
       return res
         .status(400)
-        .json({ error: "Not enough available slots for the event" });
+        .json({ error: "not enough available slots for the event" });
     }
 
     const bookingCode = generateBookingCode(eventId);
@@ -82,12 +82,12 @@ router.post("/", async (req, res) => {
     );
 
     res.status(201).json({
-      message: "Booking created successfully",
+      message: "booking created successfully",
       booking_code: bookingCode,
     });
   } catch (error) {
-    console.error("Error creating booking:", error);
-    res.status(500).json({ error: "Booking creation failed" });
+    console.error("error creating booking:", error);
+    res.status(500).json({ error: "booking creation failed" });
   }
 });
 

@@ -1,4 +1,4 @@
-import API_BASE_URL from "../Utils/apiConfig";
+import API_BASE_URL from "../utils/apiConfig";
 
 export async function getDashboard() {
   try {

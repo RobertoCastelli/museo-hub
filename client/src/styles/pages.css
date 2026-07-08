@@ -166,7 +166,7 @@
 }
 
 .feedback-message {
-  padding: 1rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -294,6 +294,14 @@
   font-size: small;
   color: var(--color-text);
   opacity: 0.7;
+}
+
+.admin-message.success {
+  color: var(--color-success);
+}
+
+.admin-message.error {
+  color: var(--color-error);
 }
 
 .admin-add-button,

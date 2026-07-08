@@ -68,6 +68,7 @@ function AdminEventsModal({ formData, onSubmit, onChange, closeModal }) {
                 name="available_slots"
                 type="number"
                 min="0"
+                max={formData.max_capacity || undefined}
                 value={formData.available_slots}
                 onChange={onChange}
                 required

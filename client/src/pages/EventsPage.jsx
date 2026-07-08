@@ -31,7 +31,7 @@ function EventsPage() {
       </section>
 
       <section className="events-content">
-        {error && <p className="events-message">Error: {error.message}</p>}
+        {error && <p className="events-message">{error.message}</p>}
         {loading && <p className="events-message">loading events...</p>}
         {!loading && !error && events.length === 0 && (
           <p className="events-message">no events available.</p>

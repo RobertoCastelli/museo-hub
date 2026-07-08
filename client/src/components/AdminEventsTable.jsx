@@ -1,4 +1,4 @@
-import { formatDate } from "../Utils/formatDate";
+import { formatDate } from "../utils/formatDate";
 
 function AdminEventsTable({ events, onEdit, onDelete }) {
   return (

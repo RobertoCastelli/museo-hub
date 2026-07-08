@@ -8,20 +8,20 @@ router.post("/", async (req, res) => {
     const { booking_code, rating, comment } = req.body;
 
     if (!booking_code || !rating) {
-      return res.status(400).json({ error: "Missing required fields" });
+      return res.status(400).json({ error: "missing required fields" });
     }
 
     const ratingValue = Number(rating);
 
     if (isNaN(ratingValue) || ratingValue < 1 || ratingValue > 5) {
-      return res.status(400).json({ error: "Invalid rating (1-5)" });
+      return res.status(400).json({ error: "invalid rating (1-5)" });
     }
 
     let commentText = "";
 
-    if (comment != undefined) {
-      if (typeof comment != "string" || comment.trim() == "") {
-        return res.status(400).json({ error: "Invalid comment" });
+    if (comment !== undefined) {
+      if (typeof comment !== "string" || comment.trim() === "") {
+        return res.status(400).json({ error: "invalid comment" });
       }
       commentText = comment.trim();
     }
@@ -38,7 +38,22 @@ router.post("/", async (req, res) => {
     );
 
     if (!booking) {
-      return res.status(404).json({ error: "Booking not found" });
+      return res.status(404).json({ error: "booking not found" });
+    }
+
+    const existingFeedback = await db.get(
+      `
+    SELECT id
+    FROM feedback
+    WHERE booking_code = ?
+  `,
+      [booking_code],
+    );
+
+    if (existingFeedback) {
+      return res.status(409).json({
+        error: "feedback already submitted with this booking code",
+      });
     }
 
     await db.run(
@@ -49,13 +64,13 @@ router.post("/", async (req, res) => {
     );
 
     res.status(201).json({
-      message: "Feedback submitted successfully",
+      message: "feedback submitted successfully",
       rating: ratingValue,
       comment: commentText,
     });
   } catch (error) {
-    console.error("Error submitting feedback:", error);
-    res.status(500).json({ error: "Feedback submission failed" });
+    console.error("error submitting feedback:", error);
+    res.status(500).json({ error: "feedback submission failed" });
   }
 });
 
