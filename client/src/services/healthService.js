@@ -5,12 +5,12 @@ export async function getHealthStatus() {
     const response = await fetch(`${API_BASE_URL}/api/health`);
 
     if (!response.ok) {
-      throw new Error("Health check failed");
+      throw new Error("health check failed");
     }
 
     return response.json();
   } catch (error) {
-    console.error("Error fetching health status:", error);
+    console.error("error fetching health status:", error);
     throw error;
   }
 }
