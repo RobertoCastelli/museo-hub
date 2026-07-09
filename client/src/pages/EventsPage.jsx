@@ -32,7 +32,15 @@ function EventsPage() {
 
       <section className="events-content">
         {error && <p className="events-message">{error.message}</p>}
-        {loading && <p className="events-message">loading events...</p>}
+        {loading && (
+          <div className="events-message">
+            <p>connecting to the server...</p>
+            <p className="events-message note">
+              the first request may take up to 10 seconds if the server is in
+              sleep mode.
+            </p>
+          </div>
+        )}
         {!loading && !error && events.length === 0 && (
           <p className="events-message">no events available.</p>
         )}
