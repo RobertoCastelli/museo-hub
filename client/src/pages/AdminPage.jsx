@@ -18,6 +18,7 @@ function AdminPage() {
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState("");
   const [showAddModal, setShowAddModal] = useState(false);
+  const [dashboardRefreshKey, setDashboardRefreshKey] = useState(0);
   const [formData, setFormData] = useState({
     id: null,
     title: "",
@@ -104,6 +105,7 @@ function AdminPage() {
 
       const updateEvents = await getAdminEvents();
       setEvents(updateEvents);
+      setDashboardRefreshKey((prevKey) => prevKey + 1);
       setError(null);
       setSuccessMessage(
         formData.id === null
@@ -142,6 +144,7 @@ function AdminPage() {
       await deleteAdminEvent(id);
       setError(null);
       setEvents((prevEvents) => prevEvents.filter((event) => event.id !== id));
+      setDashboardRefreshKey((prevKey) => prevKey + 1);
       setSuccessMessage("event deleted successfully.");
     } catch (error) {
       console.error("error deleting event:", error);
@@ -151,7 +154,7 @@ function AdminPage() {
   return (
     <main className="admin-container">
       <section className="admin-dashboard">
-        <Dashboard />
+        <Dashboard refreshKey={dashboardRefreshKey} />
       </section>
 
       <section className="admin-header">

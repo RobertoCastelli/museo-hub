@@ -67,7 +67,6 @@ export async function deleteAdminEvent(id) {
     return response.json();
   } catch (error) {
     console.error("Error deleting event:", error);
-    MediaKeyStatusMap;
     throw error;
   }
 }

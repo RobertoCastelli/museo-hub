@@ -4,7 +4,7 @@ import { GoCalendar, GoCommentDiscussion } from "react-icons/go";
 import { FaRegStar } from "react-icons/fa";
 import { IoTicketOutline } from "react-icons/io5";
 
-function Dashboard() {
+function Dashboard({ refreshKey = 0 }) {
   const [stats, setStats] = useState(null);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function Dashboard() {
       .catch((error) => {
         console.error("Error fetching dashboard data:", error);
       });
-  }, []);
+  }, [refreshKey]);
 
   if (!stats) {
     return (
