@@ -10,7 +10,7 @@ Il progetto simula una piccola realtà museale e si concentra sulla digitalizzaz
 
 ## Stato del progetto
 
-Prototipo funzionale quasi completato.
+Prototipo funzionale completato per il perimetro previsto dal Project Work.
 
 Funzionalità principali implementate:
 
@@ -18,8 +18,8 @@ Funzionalità principali implementate:
 - dettaglio evento;
 - prenotazione guest;
 - generazione codice prenotazione;
-- raccolta feedback;
-- dashboard amministrativa;
+- raccolta feedback tramite booking code;
+- dashboard amministrativa con indicatori sintetici;
 - gestione eventi tramite CRUD amministrativo;
 - consultazione prenotazioni lato amministratore;
 - API REST;
@@ -27,12 +27,12 @@ Funzionalità principali implementate:
 
 ## Stack tecnologico
 
-- Frontend: React + Vite
-- Backend: Node.js + Express
-- Database: SQLite
-- Repository: GitHub
-- Deploy frontend: Netlify
-- Deploy backend: Render (se tecnicamente sostenibile)
+- **Frontend**: React + Vite
+- **Backend**: Node.js + Express
+- **Database**: SQLite
+- **Repository**: GitHub
+- **Deploy frontend**: Netlify
+- **Deploy backend**: Render
 
 ## Documentazione
 
@@ -53,6 +53,7 @@ Documenti principali:
 - `08-pseudocodice.md`
 - `09-test-funzionali.md`
 - `10-esecuzione-deploy.md`
+- `11-limiti-sviluppi-futuri.md`
 
 ## Obiettivo del prototipo
 

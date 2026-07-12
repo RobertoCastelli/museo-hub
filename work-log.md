@@ -153,3 +153,35 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** correzione delle anomalie emerse durante il collaudo del prototipo, con particolare riferimento al corretto collegamento dei service frontend alle API amministrative, al miglioramento della validazione dei dati inseriti nei form, all'uniformazione dei messaggi di conferma ed errore, all'introduzione del controllo sui feedback duplicati tramite booking code e ad alcune rifiniture dell'interfaccia amministrativa.
 
 **Riferimento Git:** commit relativo al consolidamento dell'area amministrativa e alle correzioni emerse durante il collaudo finale.
+
+### 022 — 09/07/2026 — Stabilizzazione deploy Netlify e casing cartella utils
+
+**Fase:** consolidamento deploy frontend.
+
+**Attività:** risoluzione del problema di build su Netlify causato dal casing della cartella `utils`. In ambiente locale il problema non emergeva, mentre l’ambiente Linux di build richiedeva coerenza esatta tra percorso importato e nome della cartella tracciata da Git. La correzione ha permesso il completamento del deploy frontend e la corretta risoluzione degli import.
+
+**Riferimento Git:** commit relativo alla correzione del casing della cartella `utils` e alla stabilizzazione del deploy Netlify.
+
+### 023 — 09/07/2026 — Rifinitura navigazione e aggiornamento dashboard amministrativa
+
+**Fase:** rifinitura funzionale frontend.
+
+**Attività:** introduzione del collegamento dal logo alla homepage del catalogo eventi, senza modificare la struttura generale dell’interfaccia. Correzione del comportamento della dashboard amministrativa dopo operazioni CRUD sugli eventi, in modo da aggiornare i contatori senza richiedere il refresh manuale della pagina.
+
+**Riferimento Git:** commit relativi al collegamento del logo alla homepage e all’aggiornamento dei dati dashboard dopo modifiche amministrative.
+
+### 024 — 10/07/2026 — Collaudo produzione e raccolta screenshot finali
+
+**Fase:** collaudo funzionale finale.
+
+**Attività:** verifica del prototipo in ambiente deployato, con frontend pubblicato su Netlify e backend su Render. Sono stati controllati i principali flussi pubblici e amministrativi: caricamento iniziale del backend, catalogo eventi, dettaglio evento, prenotazione guest, generazione del booking code, invio feedback, dashboard amministrativa, creazione, modifica ed eliminazione eventi. Sono stati raccolti screenshot finali a supporto dei test funzionali.
+
+**Riferimento Git:** attività documentata tramite aggiornamento degli screenshot finali nella cartella `docs/screenshots/`.
+
+### 025 — 12/07/2026 — Chiusura documentazione tecnica del repository
+
+**Fase:** consolidamento documentale finale.
+
+**Attività:** aggiornamento della documentazione tecnica del repository in vista della redazione del report finale. Sono stati aggiornati i test funzionali, le istruzioni di esecuzione e deploy, i limiti del prototipo, la checklist di progetto, la scheda progetto e il README, mantenendo coerenza tra codice implementato, screenshot disponibili, deploy effettivo e perimetro funzionale dichiarato.
+
+**Riferimento Git:** da associare al commit documentale finale relativo a test funzionali, deploy, limiti, checklist, README, scheda progetto e screenshot.

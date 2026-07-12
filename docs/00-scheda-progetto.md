@@ -76,9 +76,11 @@ Il flusso previsto è il seguente:
 
 - **Visual Studio Code:** ambiente di sviluppo principale;
 - **Vim:** editor testuale di supporto per modifiche rapide;
-- **ChatGPT:** strumento di supporto per la revisione dei testi, l’uniformità terminologica e il controllo della coerenza documentale;
 - **Mermaid:** realizzazione di diagrammi testuali versionabili;
-- **Markdown:** redazione della documentazione progettuale.
+- **Markdown:** redazione della documentazione progettuale;
+- **ChatGPT:** supporto alla revisione dei testi, all’uniformità terminologica, al controllo della coerenza documentale, al confronto tra possibili soluzioni tecniche e alla generazione assistita del logo.
+
+L’utilizzo di ChatGPT ha riguardato attività di revisione testuale e controllo di coerenza della documentazione, con particolare attenzione a refusi, uniformità terminologica e dei formati. Il codice del prototipo è stato implementato dallo studente; lo strumento è stato utilizzato come supporto puntuale per il controllo di errori e il confronto su possibili alternative tecniche, senza sostituire l’attività di implementazione. Le scelte progettuali, le soluzioni tecniche adottate, le scelte di layout, la verifica del funzionamento e l’adattamento dei contenuti al Project Work sono rimasti sotto la responsabilità diretta dello studente.
 
 ## Output previsti
 

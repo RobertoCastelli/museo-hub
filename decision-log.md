@@ -6,7 +6,7 @@ _Questo documento registra le principali decisioni progettuali prese durante lo 
 
 - D001 - **Nome progetto:** MuseoHub
 - D002 - **Contesto:** piccola realtà museale simulata
-- D003 - **Stack:** React / Express / SQLite / Render (se tecnicamente sostenibile)
+- D003 - **Stack:** React / Express / SQLite / Netlify / Render
 - D004 - **Strumenti:** Markdown e Mermaid per la documentazione
 - D005 - **Editor:** Visual Studio Code e Vim
 - D006 - **Tipo prenotazione:** guest / no registrazione / massimo 4 partecipanti per prenotazione
@@ -25,3 +25,5 @@ _Questo documento registra le principali decisioni progettuali prese durante lo 
 - D019 - **CRUD eventi:** gestito tramite modal unica riutilizzata per creazione e modifica evento
 - D020 - **Prenotazioni Admin:** previste in sola consultazione; il prototipo verte sulla gestione eventi
 - D021 - **Autenticazione Admin:** esclusa dal prototipo; l’area Admin è simulata e documentata come limite progettuale
+- D022 - **Database deploy:** SQLite inizializzato tramite bootstrap automatico all’avvio dell’applicazione.
+- D023 - **Responsività:** collaudo principale su desktop; ottimizzazione mobile completa esclusa dal perimetro.
