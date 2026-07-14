@@ -80,7 +80,7 @@ Il flusso previsto è il seguente:
 - **Markdown:** redazione della documentazione progettuale;
 - **ChatGPT:** supporto alla revisione dei testi, all’uniformità terminologica, al controllo della coerenza documentale, al confronto tra possibili soluzioni tecniche e alla generazione assistita del logo.
 
-L’utilizzo di ChatGPT ha riguardato attività di revisione testuale e controllo di coerenza della documentazione, con particolare attenzione a refusi, uniformità terminologica e dei formati. Il codice del prototipo è stato implementato dallo studente; lo strumento è stato utilizzato come supporto puntuale per il controllo di errori e il confronto su possibili alternative tecniche, senza sostituire l’attività di implementazione. Le scelte progettuali, le soluzioni tecniche adottate, le scelte di layout, la verifica del funzionamento e l’adattamento dei contenuti al Project Work sono rimasti sotto la responsabilità diretta dello studente.
+ChatGPT è stato utilizzato come supporto operativo per accelerare alcune attività di revisione testuale, controllo di coerenza e uniformazione della documentazione. Lo strumento è stato utile per individuare refusi, confrontare alternative tecniche e rendere più ordinati testi, tabelle e descrizioni. Il codice del prototipo è stato implementato dallo studente; ChatGPT è stato utilizzato puntualmente, senza sostituire l’attività di progettazione, implementazione, verifica e scelta delle soluzioni adottate.
 
 ## Output previsti
 

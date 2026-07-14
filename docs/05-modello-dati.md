@@ -25,7 +25,6 @@ I nomi dei campi potranno essere adattati durante l’implementazione del backen
 - id;
 - titolo;
 - descrizione;
-- categoria;
 - data o periodo di svolgimento;
 - capienza massima;
 - disponibilità residua;
