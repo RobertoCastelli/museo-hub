@@ -25,6 +25,8 @@ Funzionalità principali implementate:
 - API REST;
 - database SQLite.
 
+Per la revisione accademica, l’area amministrativa è accessibile dalla voce `admin` della navbar tramite credenziali demo: ID `admin`, password `pegaso`.
+
 ## Stack tecnologico
 
 - **Frontend**: React + Vite

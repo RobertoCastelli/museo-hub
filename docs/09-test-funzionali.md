@@ -191,3 +191,17 @@ _Documenta scenari d’uso, risultati attesi, esito e screenshot utili alla vali
 **Risultato atteso:** visualizzazione del nuovo evento nella homepage pubblica.  
 **Esito:** superato.  
 **Screenshot:** `docs/screenshots/39-admin-homepage-add-event.png`
+
+### Accesso amministrativo tramite modale demo
+
+**Obiettivo:** verificare che l’accesso all’area amministrativa avvenga tramite modale con credenziali demo.  
+**Risultato atteso:** apertura del modale dalla voce `admin`, gestione dell’errore con credenziali errate e accesso alla pagina `/admin` con credenziali corrette.  
+**Esito:** superato.  
+**Screenshot:** `docs/screenshots/40-admin-access-modal.png`
+
+### Blocco accesso diretto area amministrativa
+
+**Obiettivo:** verificare che la pagina `/admin` non sia accessibile direttamente senza sessione amministrativa attiva.  
+**Risultato atteso:** reindirizzamento alla homepage quando si digita direttamente `/admin` senza aver effettuato l’accesso demo.  
+**Esito:** superato.  
+**Screenshot:** `docs/screenshots/41-admin-direct-access-redirect.png`

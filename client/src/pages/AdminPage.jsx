@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AdminEventsTable from "../components/AdminEventsTable";
 import AdminBookingsTable from "../components/AdminBookingsTable";
 import AdminEventsModal from "../components/AdminEventsModal";
@@ -10,8 +11,13 @@ import {
   updateAdminEvent,
   deleteAdminEvent,
 } from "../services/adminService";
+import { ADMIN_AUTH_STORAGE_KEY } from "../utils/adminDemoConfig";
 
 function AdminPage() {
+  const navigate = useNavigate();
+  const isAdminLogged =
+    sessionStorage.getItem(ADMIN_AUTH_STORAGE_KEY) === "true";
+
   const [events, setEvents] = useState([]);
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -42,6 +48,14 @@ function AdminPage() {
   };
 
   useEffect(() => {
+    if (!isAdminLogged) {
+      navigate("/", { replace: true });
+    }
+  }, [isAdminLogged, navigate]);
+
+  useEffect(() => {
+    if (!isAdminLogged) return;
+
     getAdminEvents()
       .then((data) => {
         setEvents(data);
@@ -52,9 +66,11 @@ function AdminPage() {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [isAdminLogged]);
 
   useEffect(() => {
+    if (!isAdminLogged) return;
+
     getAdminBookings()
       .then((data) => {
         setBookings(data);
@@ -65,7 +81,7 @@ function AdminPage() {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [isAdminLogged]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -150,6 +166,10 @@ function AdminPage() {
       console.error("error deleting event:", error);
     }
   };
+
+  if (!isAdminLogged) {
+    return null;
+  }
 
   return (
     <main className="admin-container">

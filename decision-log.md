@@ -24,6 +24,7 @@ _Questo documento registra le principali decisioni progettuali prese durante lo 
 - D018 - **Gestione eventi:** implementata in forma tabellare per privilegiare leggibilità e operatività
 - D019 - **CRUD eventi:** gestito tramite modal unica riutilizzata per creazione e modifica evento
 - D020 - **Prenotazioni Admin:** previste in sola consultazione; il prototipo verte sulla gestione eventi
-- D021 - **Autenticazione Admin:** esclusa dal prototipo; l’area Admin è simulata e documentata come limite progettuale
-- D022 - **Database deploy:** SQLite inizializzato tramite bootstrap automatico all’avvio dell’applicazione.
-- D023 - **Responsività:** collaudo principale su desktop; ottimizzazione mobile completa esclusa dal perimetro.
+- D021 - **Database deploy:** SQLite inizializzato tramite bootstrap automatico all’avvio dell’applicazione.
+- D022 - **Responsività:** collaudo principale su desktop; ottimizzazione mobile completa esclusa dal perimetro.
+- D023 - **Favicon applicativa:** sostituita la favicon predefinita di Vite con un’icona coerente con l’identità visiva di MuseoHub.
+- D024 - **Autenticazione Admin:** autenticazione production-ready esclusa; introdotta protezione dimostrativa con modale admin e sessione frontend.

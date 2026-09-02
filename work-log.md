@@ -185,3 +185,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** aggiornamento della documentazione tecnica del repository in vista della redazione del report finale. Sono stati aggiornati i test funzionali, le istruzioni di esecuzione e deploy, i limiti del prototipo, la checklist di progetto, la scheda progetto e il README, mantenendo coerenza tra codice implementato, screenshot disponibili, deploy effettivo e perimetro funzionale dichiarato.
 
 **Riferimento Git:** da associare al commit documentale finale relativo a test funzionali, deploy, limiti, checklist, README, scheda progetto e screenshot.
+
+### 026 — 01-02/09/2026 — Revisione accesso amministrativo dimostrativo
+
+**Fase:** revisione post-valutazione.
+
+**Attività:** introduzione di un modale di accesso amministrativo attivato dalla voce `admin` della navbar. L’accesso alla pagina `/admin` avviene solo dopo inserimento di credenziali demo e viene impedita la visualizzazione diretta dell’area amministrativa tramite URL senza sessione admin attiva. Sostituita inoltre la favicon predefinita di Vite con un’icona coerente con l’identità visiva di MuseoHub.
+
+**Riferimento Git:** commit relativo all’introduzione del modale di accesso admin dimostrativo e alla sostituzione della favicon.

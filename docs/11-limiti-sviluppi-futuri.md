@@ -10,15 +10,17 @@ MuseoHub è stato sviluppato come prototipo accademico finalizzato alla digitali
 
 I principali limiti sono descritti nelle sezioni seguenti.
 
-## Assenza di autenticazione
+## ## Autenticazione amministrativa dimostrativa
 
-L’area amministrativa non prevede un sistema di autenticazione reale.
+L’area amministrativa include una protezione dimostrativa tramite modale con credenziali demo.
 
 Questa scelta è stata adottata per mantenere il prototipo concentrato sui processi principali richiesti dal Project Work: catalogo eventi, prenotazioni, feedback, CRUD amministrativo, API e database relazionale.
 
+La soluzione consente di limitare l’accesso operativo alle funzioni amministrative, ma non rappresenta un sistema di autenticazione production-ready.
+
 In uno scenario reale sarebbe necessario introdurre:
 
-- autenticazione amministratore;
+- autenticazione amministratore server-side;
 - gestione sicura delle sessioni o dei token;
 - controllo degli accessi;
 - ruoli e permessi;
