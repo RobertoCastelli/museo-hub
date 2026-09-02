@@ -16,6 +16,7 @@ Funzionalità principali implementate:
 
 - catalogo eventi;
 - dettaglio evento;
+- immagini identificative per gli eventi;
 - prenotazione guest;
 - generazione codice prenotazione;
 - raccolta feedback tramite booking code;

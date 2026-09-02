@@ -28,3 +28,4 @@ _Questo documento registra le principali decisioni progettuali prese durante lo 
 - D022 - **Responsività:** collaudo principale su desktop; ottimizzazione mobile completa esclusa dal perimetro.
 - D023 - **Favicon applicativa:** sostituita la favicon predefinita di Vite con un’icona coerente con l’identità visiva di MuseoHub.
 - D024 - **Autenticazione Admin:** autenticazione production-ready esclusa; introdotta protezione dimostrativa con modale admin e sessione frontend.
+- D025 - **Immagini evento preset:** associate agli eventi immagini identificative tramite `image_key`, evitando upload file per mantenere il prototipo semplice.

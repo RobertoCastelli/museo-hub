@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getEventInitials } from "../utils/getEventInitials";
+import { getEventImageByKey } from "../utils/eventImageOptions";
 import BookingForm from "../components/BookingForm";
 import { getEventById } from "../services/eventsService";
 import { formatDate } from "../utils/formatDate";
@@ -41,6 +42,8 @@ function EventDetailPage() {
     });
   };
 
+  const eventImage = event ? getEventImageByKey(event.image_key) : null;
+
   return (
     <main className="detail-container">
       <section className="detail-header">
@@ -57,7 +60,15 @@ function EventDetailPage() {
           <div className="detail-layout">
             <article className="detail-info">
               <div className="detail-thumbnail">
-                {getEventInitials(event.title)}
+                <img
+                  className="detail-image"
+                  src={eventImage}
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span className="detail-initials">
+                  {getEventInitials(event.title)}
+                </span>
               </div>
 
               <h1 className="detail-title">{event.title}</h1>

@@ -4,6 +4,7 @@ import AdminEventsTable from "../components/AdminEventsTable";
 import AdminBookingsTable from "../components/AdminBookingsTable";
 import AdminEventsModal from "../components/AdminEventsModal";
 import Dashboard from "../components/Dashboard";
+import { DEFAULT_EVENT_IMAGE_KEY } from "../utils/eventImageOptions";
 import {
   getAdminEvents,
   getAdminBookings,
@@ -33,6 +34,7 @@ function AdminPage() {
     max_capacity: "",
     available_slots: "",
     status: "active",
+    image_key: DEFAULT_EVENT_IMAGE_KEY,
   });
 
   const resetForm = () => {
@@ -44,6 +46,7 @@ function AdminPage() {
       max_capacity: "",
       available_slots: "",
       status: "active",
+      image_key: DEFAULT_EVENT_IMAGE_KEY,
     });
   };
 
@@ -112,6 +115,7 @@ function AdminPage() {
       max_capacity: maxCapacity,
       available_slots: availableSlots,
       status: formData.status,
+      image_key: formData.image_key,
     };
 
     try {
@@ -145,6 +149,7 @@ function AdminPage() {
       max_capacity: event.max_capacity,
       available_slots: event.available_slots,
       status: event.status,
+      image_key: event.image_key || DEFAULT_EVENT_IMAGE_KEY,
     });
     setShowAddModal(true);
   };

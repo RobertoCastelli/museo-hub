@@ -10,7 +10,7 @@ MuseoHub è stato sviluppato come prototipo accademico finalizzato alla digitali
 
 I principali limiti sono descritti nelle sezioni seguenti.
 
-## ## Autenticazione amministrativa dimostrativa
+## Autenticazione amministrativa dimostrativa
 
 L’area amministrativa include una protezione dimostrativa tramite modale con credenziali demo.
 
@@ -86,7 +86,7 @@ Sono presenti controlli applicativi di base, come la validazione dei dati princi
 
 Gli sviluppi futuri più rilevanti riguardano:
 
-- introduzione dell’autenticazione amministrativa;
+- introduzione di autenticazione amministrativa server-side e production-ready;
 - gestione di ruoli e permessi;
 - utilizzo di un database persistente gestito;
 - invio email di conferma prenotazione;

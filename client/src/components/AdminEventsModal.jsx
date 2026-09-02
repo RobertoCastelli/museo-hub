@@ -1,3 +1,5 @@
+import { EVENT_IMAGE_OPTIONS } from "../utils/eventImageOptions";
+
 function AdminEventsModal({ formData, onSubmit, onChange, closeModal }) {
   return (
     <div>
@@ -73,6 +75,22 @@ function AdminEventsModal({ formData, onSubmit, onChange, closeModal }) {
                 onChange={onChange}
                 required
               />
+            </div>
+
+            <div className="admin-form-group">
+              <label htmlFor="image_key">event image</label>
+              <select
+                id="image_key"
+                name="image_key"
+                value={formData.image_key}
+                onChange={onChange}
+              >
+                {EVENT_IMAGE_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div className="admin-form-group">

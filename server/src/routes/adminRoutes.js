@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     const db = await openDb();
 
     const events = await db.all(`
-      SELECT id, title, description, date, max_capacity, available_slots, status
+      SELECT id, title, description, date, max_capacity, available_slots, status, image_key
       FROM events 
       ORDER BY date ASC
       `);
@@ -21,8 +21,15 @@ router.get("/", async (req, res) => {
 
 router.post("/events", async (req, res) => {
   try {
-    const { title, description, date, max_capacity, available_slots, status } =
-      req.body;
+    const {
+      title,
+      description,
+      date,
+      max_capacity,
+      available_slots,
+      status,
+      image_key = "art-exhibition",
+    } = req.body;
 
     const db = await openDb();
     await db.run(
@@ -33,9 +40,19 @@ router.post("/events", async (req, res) => {
         date,
         max_capacity,
         available_slots,
-        status)
-      VALUES (?, ?, ?, ?, ?, ?) `,
-      [title, description, date, max_capacity, available_slots, status],
+        status,
+        image_key
+      )
+      VALUES (?, ?, ?, ?, ?, ?, ?) `,
+      [
+        title,
+        description,
+        date,
+        max_capacity,
+        available_slots,
+        status,
+        image_key,
+      ],
     );
 
     res.status(200).json({ message: "event created successfully" });
@@ -47,8 +64,15 @@ router.post("/events", async (req, res) => {
 router.put("/events/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const { title, description, date, max_capacity, available_slots, status } =
-      req.body;
+    const {
+      title,
+      description,
+      date,
+      max_capacity,
+      available_slots,
+      status,
+      image_key = "art-exhibition",
+    } = req.body;
 
     const db = await openDb();
 
@@ -61,10 +85,20 @@ router.put("/events/:id", async (req, res) => {
         date = ?,
         max_capacity = ?,
         available_slots = ?,
-        status= ?
+        status= ?,
+        image_key = ?
       WHERE id = ?
     `,
-      [title, description, date, max_capacity, available_slots, status, id],
+      [
+        title,
+        description,
+        date,
+        max_capacity,
+        available_slots,
+        status,
+        image_key,
+        id,
+      ],
     );
     res.status(200).json({ message: "event editing successfully" });
   } catch (error) {

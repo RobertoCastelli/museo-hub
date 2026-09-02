@@ -1,13 +1,24 @@
 import { Link } from "react-router-dom";
 import { getEventInitials } from "../utils/getEventInitials";
+import { getEventImageByKey } from "../utils/eventImageOptions";
 import { formatDate } from "../utils/formatDate";
 import { GoCalendar, GoPeople } from "react-icons/go";
 
 function EventCard({ event }) {
+  const eventImage = getEventImageByKey(event.image_key);
+
   return (
     <Link className="event-card-container" to={`/events/${event.id}`}>
       <div className="event-card-thumbnail">
-        {getEventInitials(event.title)}
+        <img
+          className="event-card-image"
+          src={eventImage}
+          alt=""
+          aria-hidden="true"
+        />
+        <span className="event-card-initials">
+          {getEventInitials(event.title)}
+        </span>
       </div>
 
       <div className="event-card-content">

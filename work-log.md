@@ -193,3 +193,11 @@ _Questo documento registra in forma sintetica le principali fasi di lavoro svolt
 **Attività:** introduzione di un modale di accesso amministrativo attivato dalla voce `admin` della navbar. L’accesso alla pagina `/admin` avviene solo dopo inserimento di credenziali demo e viene impedita la visualizzazione diretta dell’area amministrativa tramite URL senza sessione admin attiva. Sostituita inoltre la favicon predefinita di Vite con un’icona coerente con l’identità visiva di MuseoHub.
 
 **Riferimento Git:** commit relativo all’introduzione del modale di accesso admin dimostrativo e alla sostituzione della favicon.
+
+### 027 — 02/09/2026 — Integrazione immagini identificative eventi
+
+**Fase:** revisione post-valutazione.
+
+**Attività:** integrazione di immagini identificative per gli eventi del catalogo MuseoHub. È stata aggiunta la colonna `image_key` alla tabella `events`, aggiornato il seed dei dati iniziali e adeguate le API per restituire la chiave immagine. Nel frontend sono state inserite immagini preset in `assets`, con visualizzazione nelle card del catalogo e nella pagina dettaglio evento. L’area amministrativa consente ora di selezionare l’immagine dell’evento in fase di creazione e modifica.
+
+**Riferimento Git:** commit relativo all’integrazione delle immagini evento selezionabili.

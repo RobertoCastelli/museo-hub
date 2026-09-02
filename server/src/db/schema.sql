@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS events (
     max_capacity INTEGER NOT NULL,
     available_slots INTEGER NOT NULL,
     status TEXT NOT NULL DEFAULT 'active',
+    image_key TEXT NOT NULL DEFAULT 'art-exhibition',
     created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
 

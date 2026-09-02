@@ -19,6 +19,7 @@ erDiagram
         integer max_capacity
         integer available_slots
         string status
+        string image_key
     }
 
     BOOKINGS {

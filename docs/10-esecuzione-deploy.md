@@ -100,6 +100,10 @@ Sono stati verificati:
 - validazione dei dati evento;
 - collegamento Netlify-Render;
 - comportamento del frontend durante il primo caricamento del backend Render in sleep mode.
+- accesso amministrativo tramite modale demo;
+- visualizzazione delle immagini identificative nel catalogo eventi;
+- visualizzazione delle immagini nella pagina dettaglio evento;
+- selezione dell’immagine evento tramite form amministrativo;
 
 Gli esiti dei test sono documentati in:
 
@@ -119,5 +123,5 @@ Il deploy è adeguato alla dimostrazione del prototipo, ma presenta alcuni limit
 
 - il backend Render può richiedere alcuni secondi al primo avvio dopo inattività;
 - SQLite è usato come database dimostrativo, non come soluzione persistente di produzione;
-- non sono implementati autenticazione, ruoli amministrativi complessi o hardening cybersecurity;
+- non è implementata un’autenticazione amministrativa server-side e production-ready; restano esclusi ruoli amministrativi complessi e hardening cybersecurity;
 - l’interfaccia è stata collaudata principalmente in ambiente desktop.

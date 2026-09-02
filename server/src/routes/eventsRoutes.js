@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     const db = await openDb();
 
     const events = await db.all(`
-    SELECT id, title, description, date, max_capacity, available_slots, status
+    SELECT id, title, description, date, max_capacity, available_slots, status, image_key
       FROM events 
       WHERE status = 'active' 
       ORDER BY date ASC
@@ -31,7 +31,7 @@ router.get("/:id", async (req, res) => {
 
     const event = await db.get(
       `
-      SELECT id, title, description, date, max_capacity, available_slots, status
+      SELECT id, title, description, date, max_capacity, available_slots, status, image_key
       FROM events 
       WHERE id = ? 
       `,

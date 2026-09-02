@@ -199,9 +199,30 @@ _Documenta scenari d’uso, risultati attesi, esito e screenshot utili alla vali
 **Esito:** superato.  
 **Screenshot:** `docs/screenshots/40-admin-access-modal.png`
 
-### Blocco accesso diretto area amministrativa
+### Gestione credenziali amministrative errate
 
-**Obiettivo:** verificare che la pagina `/admin` non sia accessibile direttamente senza sessione amministrativa attiva.  
-**Risultato atteso:** reindirizzamento alla homepage quando si digita direttamente `/admin` senza aver effettuato l’accesso demo.  
+**Obiettivo:** verificare che il sistema non consenta l’accesso all’area amministrativa con credenziali demo non valide.  
+**Risultato atteso:** visualizzazione di un messaggio di errore e permanenza nel modale di accesso.  
 **Esito:** superato.  
-**Screenshot:** `docs/screenshots/41-admin-direct-access-redirect.png`
+**Screenshot:** `docs/screenshots/41-admin-access-modal-failed.png`
+
+### Visualizzazione immagini nel catalogo eventi
+
+**Obiettivo:** verificare che gli eventi del catalogo pubblico mostrino immagini identificative associate tramite preset.  
+**Risultato atteso:** ogni card evento visualizza un’immagine coerente con la chiave immagine salvata per l’evento, mantenendo le iniziali dinamiche come supporto grafico.  
+**Esito:** superato.  
+**Screenshot:** `docs/screenshots/42-homepage-event-images.png`
+
+### Visualizzazione immagine nel dettaglio evento
+
+**Obiettivo:** verificare che la pagina dettaglio evento mostri l’immagine identificativa associata all’evento selezionato.  
+**Risultato atteso:** visualizzazione dell’immagine evento nella scheda dettaglio, con titolo, descrizione, data, posti disponibili e form di prenotazione invariati.  
+**Esito:** superato.  
+**Screenshot:** `docs/screenshots/43-event-detail-image.png`
+
+### Selezione immagine evento lato amministratore
+
+**Obiettivo:** verificare che l’amministratore possa selezionare un’immagine preset durante la creazione o modifica di un evento.  
+**Risultato atteso:** presenza del campo `event image` nel form amministrativo e salvataggio della scelta nell’evento.  
+**Esito:** superato.  
+**Screenshot:** `docs/screenshots/44-admin-event-image-select.png`
